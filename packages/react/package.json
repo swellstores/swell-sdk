@@ -2,13 +2,27 @@
 	"name": "react",
 	"version": "0.0.0",
 	"private": true,
+	"type": "module",
 	"scripts": {
-		"lint": "echo \"Error: to be implemented\"",
+		"dev": "vite",
+		"build": "tsc && vite build",
 		"test": "echo \"Error: to be implemented\"",
-		"build": "echo \"Error: to be implemented\""
+		"lint": "eslint --ext .ts,.tsx --ignore-path .gitignore .",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "^18.2.0"
 	},
 	"devDependencies": {
+		"@types/react": "^18.0.24",
+		"@types/react-dom": "^18.0.8",
+		"@vitejs/plugin-react": "^2.2.0",
 		"eslint": "^8.27.0",
-		"eslint-plugin-react-hooks": "^4.6.0"
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-config-custom": "workspace:*",
+		"tsconfig": "workspace:*",
+		"react-dom": "^18.2.0",
+		"typescript": "^4.6.4",
+		"vite": "^3.2.3"
 	}
 }
