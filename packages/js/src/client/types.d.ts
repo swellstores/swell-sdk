@@ -1,24 +1,22 @@
+import { SwellSessionOptions } from "../types/session";
+
 export interface SwellClientRequiredOptions {
 	store: string;
 	key: string;
 }
 
-export interface SwellClientInitOptions extends SwellClientRequiredOptions {
+export interface SwellClientInitOptions
+	extends SwellClientRequiredOptions,
+		SwellSessionOptions {
 	url?: string;
 	vaultUrl?: string;
 	useCamelCase?: boolean;
 	previewContent?: boolean;
-	sessionCookie?: string;
-	locale?: string;
-	currency?: string;
 }
 
-export interface SwellClientOptions {
+export interface SwellClientOptions extends SwellSessionOptions {
 	useCamelCase: boolean;
 	previewContent: boolean;
-	locale?: string;
-	currency?: string;
-	sessionCookie?: string;
 }
 
 export interface SwellClient {

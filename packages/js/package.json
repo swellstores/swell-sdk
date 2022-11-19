@@ -10,9 +10,13 @@
 		"preview": "vite preview",
 		"lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
 	},
+	"dependencies": {
+		"ofetch": "^1.0.0"
+	},
 	"devDependencies": {
 		"eslint": "^8.27.0",
 		"eslint-config-custom": "workspace:*",
+		"msw": "^0.48.3",
 		"tsconfig": "workspace:*",
 		"typescript": "^4.6.4",
 		"vite": "^3.2.3",

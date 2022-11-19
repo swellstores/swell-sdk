@@ -1,10 +1,10 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, it } from "vitest";
 import { init } from "./client";
 import defaults from "./defaults.json";
 import type { SwellClientInitOptions } from "./types";
 
 describe("Client Init", () => {
-	test("should throw an error when missing required options", () => {
+	it("should throw an error when missing required options", () => {
 		const noKey: Partial<SwellClientInitOptions> = {
 			store: "test-store",
 		};
@@ -25,7 +25,7 @@ describe("Client Init", () => {
 		);
 	});
 
-	test("should contain the required passed in properties", () => {
+	it("should contain the required passed in properties", () => {
 		const options: SwellClientInitOptions = {
 			store: "test-store",
 			key: "test-key",
@@ -35,7 +35,7 @@ describe("Client Init", () => {
 		expect(client.store).toEqual(options.store);
 	});
 
-	test("should set the default options when not specified", () => {
+	it("should set the default options when not specified", () => {
 		const options: SwellClientInitOptions = {
 			store: "test-store",
 			key: "test-key",
@@ -50,7 +50,7 @@ describe("Client Init", () => {
 		expect(client.options.currency).toBeUndefined();
 	});
 
-	test("should not set default options when specified", () => {
+	it("should not set default options when specified", () => {
 		const options: SwellClientInitOptions = {
 			store: "test-store",
 			key: "test-key",
@@ -68,7 +68,7 @@ describe("Client Init", () => {
 		expect(client.options.currency).toBeUndefined();
 	});
 
-	test("should set locale and currency when specified", () => {
+	it("should set locale and currency when specified", () => {
 		const options: SwellClientInitOptions = {
 			store: "test-store",
 			key: "test-key",
@@ -81,7 +81,7 @@ describe("Client Init", () => {
 		expect(client.options.currency).toEqual(options.currency);
 	});
 
-	test("should compute the correct URL when not using a custom URL", () => {
+	it("should compute the correct URL when not using a custom URL", () => {
 		const options: SwellClientInitOptions = {
 			store: "test-store",
 			key: "test-key",
