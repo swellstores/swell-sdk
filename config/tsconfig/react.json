@@ -1,11 +1,12 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"display": "React",
-	"extends": "./base.json",
+	"extends": "./js.json",
 	"compilerOptions": {
-		"target": "es2020",
-		"lib": ["DOM", "esnext"],
-		"module": "esnext",
+		"lib": [
+			"DOM",
+			"esnext"
+		],
 		"jsx": "react-jsx"
 	}
 }

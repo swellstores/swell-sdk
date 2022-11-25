@@ -1,12 +1,24 @@
 import defaultOptions from "./defaults.json";
-import { removeTrailingSlash } from "../utils";
-import type { SwellClientInitOptions, SwellClient } from "./types";
+import { removeTrailingSlash } from "internal/utils";
+import type {
+	SwellClientInitOptions,
+	SwellClient,
+	SwellCamelCaseClient,
+	SwellClientInitCamelCaseOptions,
+	SwellClientInitSnakeCaseOptions,
+} from "./types";
+
+export function init(
+	options: SwellClientInitCamelCaseOptions,
+): SwellCamelCaseClient;
+
+export function init(options: SwellClientInitSnakeCaseOptions): SwellClient;
 
 /**
  * Initializes the Swell client.
- * @param options
+ * @param options - The client options.
  */
-export const init = (options: SwellClientInitOptions): SwellClient => {
+export function init(options: SwellClientInitOptions): SwellClient {
 	const { store, key } = options;
 	if (!store) {
 		throw new Error('Missing required option: "store"');
@@ -32,4 +44,4 @@ export const init = (options: SwellClientInitOptions): SwellClient => {
 			sessionToken: options.sessionToken,
 		},
 	};
-};
+}

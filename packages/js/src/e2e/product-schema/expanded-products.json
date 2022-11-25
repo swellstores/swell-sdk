@@ -1,0 +1,3428 @@
+[
+    {
+        "name": "bundle with things",
+        "sku": null,
+        "type": "bundle",
+        "active": true,
+        "images": [
+            {
+                "file": {
+                    "id": "637d59c34633ad0013c8bc52",
+                    "date_uploaded": "2022-11-22T23:22:43.731Z",
+                    "length": 287464,
+                    "md5": "9b94ffe8264410509905512aa0caf9ef",
+                    "filename": null,
+                    "content_type": "image/jpeg",
+                    "metadata": null,
+                    "url": "https://cdn.schema.io/test-staging/637d59c34633ad0013c8bc52/9b94ffe8264410509905512aa0caf9ef",
+                    "width": 566,
+                    "height": 426
+                },
+                "id": "637d5aabe55ee300157b1b2d"
+            }
+        ],
+        "purchase_options": {
+            "subscription": {
+                "active": true,
+                "plans": [
+                    {
+                        "name": "Weekly",
+                        "description": null,
+                        "price": 12,
+                        "billing_schedule": {
+                            "interval": "weekly",
+                            "interval_count": 3,
+                            "limit": null,
+                            "trial_days": 0
+                        },
+                        "has_order_schedule": true,
+                        "order_schedule": {
+                            "interval": "yearly",
+                            "interval_count": 1,
+                            "limit": 4
+                        },
+                        "id": "637d5aabe55ee300157b1b2b",
+                        "active": true
+                    },
+                    {
+                        "name": "Monthly",
+                        "description": null,
+                        "price": 121,
+                        "billing_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "limit": null,
+                            "trial_days": 0
+                        },
+                        "id": "637d5aabe55ee300157b1b2c",
+                        "active": true
+                    }
+                ]
+            }
+        },
+        "variable": true,
+        "description": "asdasdad",
+        "tags": [
+            "12",
+            "31"
+        ],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "bundle-with-things",
+        "attributes": {
+            "origin": "Ethiopia",
+            "undefined": "Ethiopia",
+            "size": [
+                "small",
+                "medium"
+            ]
+        },
+        "bundle_items": [
+            {
+                "product_id": "61f93cf0a26925013390012f",
+                "variant_id": "625ecd1e12012b0013ba56a5",
+                "options": [
+                    {
+                        "id": "625ecd14562af666da59fa51",
+                        "value": "M",
+                        "name": "Size",
+                        "variant": true,
+                        "value_id": "625ecd1d562af666da59fa53"
+                    }
+                ],
+                "quantity": 1,
+                "variable": "specific",
+                "id": "637d5aabe55ee300157b1b1e",
+                "price": 60,
+                "orig_price": 60,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "nina5 subscription prod",
+                "product": {
+                    "name": "nina5 subscription prod",
+                    "sku": null,
+                    "active": true,
+                    "images": [
+                        {
+                            "file": {
+                                "id": "61f93ca3a83b9101335c43d5",
+                                "date_uploaded": "2022-02-01T13:59:00.099Z",
+                                "length": 732692,
+                                "md5": "d0c0fa9cd7ab52ca8dca2a6faeecd1ad",
+                                "filename": null,
+                                "content_type": "image/jpeg",
+                                "metadata": null,
+                                "url": "https://cdn.schema.io/test-staging/61f93ca3a83b9101335c43d5/d0c0fa9cd7ab52ca8dca2a6faeecd1ad",
+                                "width": 2048,
+                                "height": 1365
+                            },
+                            "id": "61f93cf0a269250133900137"
+                        }
+                    ],
+                    "purchase_options": {
+                        "subscription": {
+                            "active": true,
+                            "plans": [
+                                {
+                                    "name": "Monthly",
+                                    "description": null,
+                                    "billing_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "trial_days": 3,
+                                        "limit": null
+                                    },
+                                    "price": 60,
+                                    "id": "61f93cf0a269250133900136",
+                                    "active": true
+                                }
+                            ]
+                        }
+                    },
+                    "variable": true,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "nina5-subscription-prod",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 60,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "625ecd14562af666da59fa51",
+                            "name": "Size",
+                            "values": [
+                                {
+                                    "id": "625ecd1d562af666da59fa52",
+                                    "name": "S"
+                                },
+                                {
+                                    "id": "625ecd1d562af666da59fa53",
+                                    "name": "M"
+                                },
+                                {
+                                    "id": "625ecd1d562af666da59fa54",
+                                    "name": "L"
+                                }
+                            ],
+                            "variant": true,
+                            "input_type": "select",
+                            "required": true,
+                            "active": true,
+                            "attribute_id": "size"
+                        }
+                    ],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-02-01T14:00:16.791Z",
+                    "stock_status": null,
+                    "category_index": {
+                        "sort": {
+                            "5e31db1c08eb153204cd4ac3": 0
+                        },
+                        "id": [
+                            "5e31db1c08eb153204cd4ac3"
+                        ]
+                    },
+                    "date_updated": "2022-04-19T14:54:22.326Z",
+                    "popularity": 1,
+                    "benefits_test": [],
+                    "id": "61f93cf0a26925013390012f"
+                },
+                "variant": {
+                    "parent_id": "61f93cf0a26925013390012f",
+                    "name": "M",
+                    "active": true,
+                    "option_value_ids": [
+                        "625ecd1d562af666da59fa53"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-04-19T14:54:22.399Z",
+                    "id": "625ecd1e12012b0013ba56a5"
+                }
+            },
+            {
+                "product_id": "61f94061c87036013ddd8b97",
+                "variant_id": null,
+                "options": [],
+                "quantity": 1,
+                "id": "637d5aabe55ee300157b1b1f",
+                "price": 20,
+                "orig_price": 20,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "dmitry subscription prod",
+                "variant": null,
+                "product": {
+                    "name": "dmitry subscription prod",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "subscription": {
+                            "active": true,
+                            "plans": [
+                                {
+                                    "name": "Monthly",
+                                    "description": null,
+                                    "billing_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "trial_days": 0,
+                                        "limit": null
+                                    },
+                                    "price": 20,
+                                    "id": "61f94061c87036013ddd8b9c",
+                                    "active": true
+                                }
+                            ]
+                        }
+                    },
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "dmitry-subscription-prod",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 20,
+                    "stock_tracking": false,
+                    "options": [],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-02-01T14:14:57.881Z",
+                    "stock_status": null,
+                    "date_updated": "2022-11-01T13:17:02.277Z",
+                    "popularity": 10,
+                    "id": "61f94061c87036013ddd8b97"
+                }
+            },
+            {
+                "product_id": "61f94547a83b9101336f0798",
+                "variant_id": null,
+                "options": [],
+                "quantity": 4,
+                "id": "637d5aabe55ee300157b1b20",
+                "price": 50,
+                "orig_price": 50,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "nina6 subsc prod",
+                "variant": null,
+                "product": {
+                    "name": "nina6 subsc prod",
+                    "sku": null,
+                    "active": true,
+                    "images": [
+                        {
+                            "file": {
+                                "id": "61f9451aa83b9101336e7255",
+                                "date_uploaded": "2022-02-01T14:35:06.992Z",
+                                "length": 1632056,
+                                "md5": "7b5676753769f7a63ef1b0ca3fccf61d",
+                                "filename": null,
+                                "content_type": "image/jpeg",
+                                "metadata": null,
+                                "url": "https://cdn.schema.io/test-staging/61f9451aa83b9101336e7255/7b5676753769f7a63ef1b0ca3fccf61d",
+                                "width": 1537,
+                                "height": 2049
+                            },
+                            "id": "61f94547a83b9101336f07a0"
+                        }
+                    ],
+                    "purchase_options": {
+                        "subscription": {
+                            "active": true,
+                            "plans": [
+                                {
+                                    "name": "Monthly",
+                                    "description": null,
+                                    "billing_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "trial_days": 1,
+                                        "limit": null
+                                    },
+                                    "price": 50,
+                                    "id": "61f94547a83b9101336f079f",
+                                    "active": true
+                                }
+                            ]
+                        }
+                    },
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "nina6-subsc-prod",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 50,
+                    "stock_tracking": false,
+                    "options": [],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-02-01T14:35:51.906Z",
+                    "stock_status": null,
+                    "category_index": {
+                        "sort": {
+                            "5e31db0a08eb153204cd4a1d": 6
+                        },
+                        "id": [
+                            "5e31db0a08eb153204cd4a1d"
+                        ]
+                    },
+                    "date_updated": "2022-11-02T13:38:36.245Z",
+                    "popularity": 10,
+                    "id": "61f94547a83b9101336f0798"
+                }
+            },
+            {
+                "product_id": "61f9454a69d9c20132e0600a",
+                "variant_id": null,
+                "options": [],
+                "quantity": 1,
+                "id": "637d5aabe55ee300157b1b21",
+                "price": 25,
+                "orig_price": 25,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "dmitry subscription prod 2",
+                "variant": null,
+                "product": {
+                    "name": "dmitry subscription prod 2",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "subscription": {
+                            "active": true,
+                            "plans": [
+                                {
+                                    "name": "Monthly",
+                                    "description": null,
+                                    "billing_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "trial_days": 0,
+                                        "limit": null
+                                    },
+                                    "price": 25,
+                                    "id": "61f9454a69d9c20132e0617c",
+                                    "active": true
+                                }
+                            ]
+                        }
+                    },
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "dmitry-subscription-prod-2",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 25,
+                    "stock_tracking": false,
+                    "options": [],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-02-01T14:35:54.867Z",
+                    "stock_status": null,
+                    "date_updated": "2022-11-01T13:38:52.014Z",
+                    "popularity": 10,
+                    "id": "61f9454a69d9c20132e0600a"
+                }
+            },
+            {
+                "product_id": "61f946a37f11840132868af8",
+                "variant_id": null,
+                "options": [],
+                "quantity": 1,
+                "id": "637d5aabe55ee300157b1b22",
+                "price": 35,
+                "orig_price": 35,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "dmitry subscription prod 3",
+                "variant": null,
+                "product": {
+                    "name": "dmitry subscription prod 3",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "subscription": {
+                            "active": true,
+                            "plans": [
+                                {
+                                    "name": "Monthly",
+                                    "description": null,
+                                    "billing_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "trial_days": 0,
+                                        "limit": null
+                                    },
+                                    "price": 35,
+                                    "id": "61f946a37f11840132868afc",
+                                    "active": true
+                                }
+                            ]
+                        }
+                    },
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "dmitry-subscription-prod-3",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 35,
+                    "stock_tracking": false,
+                    "options": [],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-02-01T14:41:39.900Z",
+                    "stock_status": null,
+                    "date_updated": "2022-02-01T14:42:12.547Z",
+                    "popularity": 1,
+                    "id": "61f946a37f11840132868af8"
+                }
+            },
+            {
+                "product_id": "620d4c2158bf2701321efb71",
+                "variant_id": null,
+                "options": [],
+                "quantity": 1,
+                "id": "637d5aabe55ee300157b1b23",
+                "price": 5,
+                "orig_price": 5,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "new product",
+                "variant": null,
+                "product": {
+                    "name": "new product",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "standard": {
+                            "active": true,
+                            "price": 5,
+                            "sale": false,
+                            "sale_price": null,
+                            "prices": []
+                        }
+                    },
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "new-product",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 5,
+                    "stock_tracking": false,
+                    "options": [],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-02-16T19:10:25.822Z",
+                    "stock_status": null,
+                    "date_updated": "2022-11-22T21:28:54.317Z",
+                    "prices": [],
+                    "sale": false,
+                    "sale_price": null,
+                    "popularity": 218,
+                    "id": "620d4c2158bf2701321efb71"
+                }
+            },
+            {
+                "product_id": "621d4569800e430132a7df69",
+                "variant_id": "621d4569800e430132a7e08d",
+                "options": [
+                    {
+                        "id": "621d455c826038dca616200b",
+                        "value": "L",
+                        "name": "Size",
+                        "variant": true,
+                        "value_id": "621d4569826038dca616200e"
+                    }
+                ],
+                "quantity": 3,
+                "variable": "specific",
+                "id": "637d5aabe55ee300157b1b24",
+                "price": 12,
+                "orig_price": 12,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "Test product options",
+                "product": {
+                    "name": "Test product options",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "standard": {
+                            "prices": [],
+                            "active": true,
+                            "price": 12,
+                            "sale": false,
+                            "sale_price": null
+                        }
+                    },
+                    "variable": true,
+                    "description": "What goes in here<br>",
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "test-product-options",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 12,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "621d455c826038dca616200b",
+                            "name": "Size",
+                            "values": [
+                                {
+                                    "id": "621d4569826038dca616200c",
+                                    "name": "S"
+                                },
+                                {
+                                    "id": "621d4569826038dca616200d",
+                                    "name": "M"
+                                },
+                                {
+                                    "id": "621d4569826038dca616200e",
+                                    "name": "L"
+                                }
+                            ],
+                            "variant": true,
+                            "input_type": "select",
+                            "required": true,
+                            "active": true,
+                            "attribute_id": "size"
+                        }
+                    ],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-02-28T21:58:01.668Z",
+                    "stock_status": null,
+                    "date_updated": "2022-08-11T20:30:09.222Z",
+                    "benefits_test": [],
+                    "prices": [],
+                    "sale": false,
+                    "sale_price": null,
+                    "content": {
+                        "just_anything": "hello ana!"
+                    },
+                    "id": "621d4569800e430132a7df69"
+                },
+                "variant": {
+                    "parent_id": "621d4569800e430132a7df69",
+                    "name": "L",
+                    "active": true,
+                    "option_value_ids": [
+                        "621d4569826038dca616200e"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-02-28T21:58:01.726Z",
+                    "date_updated": "2022-06-15T23:26:50.332Z",
+                    "sku": null,
+                    "id": "621d4569800e430132a7e08d"
+                }
+            },
+            {
+                "product_id": "623b7cd6df7a92013360e2c2",
+                "variant_id": null,
+                "options": [],
+                "quantity": 56,
+                "id": "637d5aabe55ee300157b1b25",
+                "price": 15,
+                "orig_price": 15,
+                "delivery": "shipment",
+                "stock_tracking": true,
+                "shipment_weight": 0,
+                "product_name": "new product one two",
+                "variant": null,
+                "product": {
+                    "name": "new product one two",
+                    "sku": "123",
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "standard": {
+                            "prices": [],
+                            "active": true,
+                            "price": 15,
+                            "sale": false,
+                            "sale_price": null
+                        }
+                    },
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "new-product-one-two",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 15,
+                    "stock_tracking": true,
+                    "options": [],
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": [],
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-03-23T20:02:30.381Z",
+                    "stock_status": "out_of_stock",
+                    "date_updated": "2022-08-11T18:49:03.579Z",
+                    "content": {
+                        "test_text": "goodbye world"
+                    },
+                    "id": "623b7cd6df7a92013360e2c2"
+                }
+            },
+            {
+                "product_id": "632dfabec21a380012423429",
+                "variant_id": "632dfabec21a38001242342b",
+                "options": [
+                    {
+                        "id": "632dfab3328ee7426844fe25",
+                        "value": "big",
+                        "name": "size",
+                        "variant": true,
+                        "value_id": "632dfabd328ee7426844fe27",
+                        "price": 5
+                    }
+                ],
+                "quantity": 1,
+                "variable": "specific",
+                "id": "637d5aabe55ee300157b1b26",
+                "price": 20,
+                "orig_price": 20,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "test orig price",
+                "product": {
+                    "name": "test orig price",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "standard": {
+                            "active": true,
+                            "price": 20,
+                            "sale": true,
+                            "sale_price": 15,
+                            "prices": []
+                        }
+                    },
+                    "variable": true,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "test-orig-price",
+                    "attributes": {
+                        "size": [
+                            "small",
+                            "big"
+                        ]
+                    },
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 20,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "632dfab3328ee7426844fe25",
+                            "values": [
+                                {
+                                    "id": "632dfabd328ee7426844fe26",
+                                    "name": "small"
+                                },
+                                {
+                                    "id": "632dfabd328ee7426844fe27",
+                                    "name": "big",
+                                    "price": 5,
+                                    "shipment_weight": null,
+                                    "description": null
+                                }
+                            ],
+                            "name": "size",
+                            "active": true,
+                            "input_type": "select",
+                            "variant": true,
+                            "description": null,
+                            "required": true,
+                            "attribute_id": "size"
+                        }
+                    ],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "sale": true,
+                    "sale_price": 15,
+                    "prices": [],
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-09-23T18:28:14.200Z",
+                    "stock_status": null,
+                    "date_updated": "2022-09-23T18:28:35.799Z",
+                    "id": "632dfabec21a380012423429"
+                },
+                "variant": {
+                    "parent_id": "632dfabec21a380012423429",
+                    "name": "big",
+                    "active": true,
+                    "option_value_ids": [
+                        "632dfabd328ee7426844fe27"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-09-23T18:28:14.250Z",
+                    "date_updated": "2022-09-23T18:28:33.218Z",
+                    "sku": null,
+                    "id": "632dfabec21a38001242342b"
+                }
+            },
+            {
+                "product_id": "637bd733997291001230dad6",
+                "variant_id": null,
+                "options": [],
+                "quantity": 1,
+                "id": "637d5aabe55ee300157b1b27",
+                "price": 0,
+                "orig_price": 0,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "empty product",
+                "variant": null,
+                "product": {
+                    "name": "empty product",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {},
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "empty-product",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 0,
+                    "stock_tracking": false,
+                    "options": [],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-11-21T19:53:23.119Z",
+                    "stock_status": null,
+                    "category_index": {
+                        "sort": {
+                            "637bd7145890f40012bfb666": 0
+                        },
+                        "id": [
+                            "637bd7145890f40012bfb666"
+                        ]
+                    },
+                    "date_updated": "2022-11-21T19:53:23.638Z",
+                    "id": "637bd733997291001230dad6"
+                }
+            },
+            {
+                "product_id": "637bd8f91a71b700129a6419",
+                "variant_id": "637bd8f91a71b700129a641f",
+                "options": [
+                    {
+                        "id": "637bd7d28112c28cbb634de0",
+                        "value": "s",
+                        "name": "size",
+                        "variant": true,
+                        "value_id": "637bd8f98112c28cbb634de8"
+                    },
+                    {
+                        "id": "637bd7d78112c28cbb634de1",
+                        "value": "blue",
+                        "name": "color",
+                        "variant": true,
+                        "value_id": "637bd8f98112c28cbb634ded"
+                    }
+                ],
+                "quantity": 1,
+                "variable": "specific",
+                "id": "637d5aabe55ee300157b1b28",
+                "price": 15,
+                "orig_price": 15,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "everything product",
+                "product": {
+                    "name": "everything product",
+                    "sku": null,
+                    "active": true,
+                    "images": [
+                        {
+                            "file": {
+                                "id": "637bd7696664c70012b11b7b",
+                                "date_uploaded": "2022-11-21T19:54:17.187Z",
+                                "length": 287464,
+                                "md5": "9b94ffe8264410509905512aa0caf9ef",
+                                "filename": null,
+                                "content_type": "image/jpeg",
+                                "metadata": null,
+                                "url": "https://cdn.schema.io/test-staging/637bd7696664c70012b11b7b/9b94ffe8264410509905512aa0caf9ef",
+                                "width": 566,
+                                "height": 426
+                            },
+                            "id": "637bd8f91a71b700129a641c"
+                        }
+                    ],
+                    "purchase_options": {
+                        "standard": {
+                            "active": true,
+                            "price": 30,
+                            "sale": true,
+                            "sale_price": 15,
+                            "prices": [
+                                {
+                                    "price": 5,
+                                    "quantity_min": 20,
+                                    "quantity_max": 50
+                                }
+                            ]
+                        },
+                        "subscription": {
+                            "active": true,
+                            "plans": [
+                                {
+                                    "name": "Monthly",
+                                    "description": "Description",
+                                    "price": 25,
+                                    "billing_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "limit": 200,
+                                        "trial_days": 3
+                                    },
+                                    "has_order_schedule": true,
+                                    "order_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "limit": 150
+                                    },
+                                    "id": "637bd8f91a71b700129a641a",
+                                    "active": true
+                                },
+                                {
+                                    "name": "Yearly",
+                                    "description": null,
+                                    "price": 150,
+                                    "billing_schedule": {
+                                        "interval": "yearly",
+                                        "interval_count": 3,
+                                        "limit": null,
+                                        "trial_days": 0
+                                    },
+                                    "id": "637bd8f91a71b700129a641b",
+                                    "active": true
+                                }
+                            ]
+                        }
+                    },
+                    "variable": true,
+                    "description": "<strong>This is a nice <em>product</em></strong><ul><li><strong>wow!<br></strong></li><li>cool</li></ul>",
+                    "tags": [
+                        "product",
+                        "tag",
+                        "everything"
+                    ],
+                    "meta_title": "everything product",
+                    "meta_description": "Meta description of everything product",
+                    "slug": "everything-product",
+                    "attributes": {
+                        "undefined": "Huskee",
+                        "brand": "Huskee",
+                        "manufacturer": "adidas",
+                        "toggle": [
+                            "toggle"
+                        ],
+                        "size": [
+                            "s",
+                            "m",
+                            "l"
+                        ],
+                        "color": [
+                            "green",
+                            "red",
+                            "blue"
+                        ]
+                    },
+                    "up_sells": [
+                        {
+                            "id": "637bd8448112c28cbb634de5",
+                            "product_id": "637bd733997291001230dad6"
+                        }
+                    ],
+                    "cross_sells": [
+                        {
+                            "id": "637bd8498112c28cbb634de6",
+                            "product_id": "632dfabec21a380012423429",
+                            "discount_type": "fixed",
+                            "discount_amount": 10
+                        },
+                        {
+                            "id": "637bd86e8112c28cbb634de7",
+                            "product_id": "637bd733997291001230dad6",
+                            "discount_type": "fixed",
+                            "discount_amount": null
+                        }
+                    ],
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 30,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "637bd7d28112c28cbb634de0",
+                            "values": [
+                                {
+                                    "id": "637bd8f98112c28cbb634de8",
+                                    "name": "s"
+                                },
+                                {
+                                    "id": "637bd8f98112c28cbb634de9",
+                                    "name": "m"
+                                },
+                                {
+                                    "id": "637bd8f98112c28cbb634dea",
+                                    "name": "l"
+                                }
+                            ],
+                            "name": "size",
+                            "active": true,
+                            "input_type": "select",
+                            "variant": true,
+                            "description": "Product size",
+                            "required": true,
+                            "attribute_id": "size"
+                        },
+                        {
+                            "id": "637bd7d78112c28cbb634de1",
+                            "name": "color",
+                            "values": [
+                                {
+                                    "id": "637bd8f98112c28cbb634deb",
+                                    "name": "green"
+                                },
+                                {
+                                    "id": "637bd8f98112c28cbb634dec",
+                                    "name": "red"
+                                },
+                                {
+                                    "id": "637bd8f98112c28cbb634ded",
+                                    "name": "blue"
+                                }
+                            ],
+                            "variant": true,
+                            "input_type": "select",
+                            "required": true,
+                            "active": true,
+                            "attribute_id": "color"
+                        },
+                        {
+                            "id": "637bd7f18112c28cbb634de2",
+                            "values": [],
+                            "name": "text",
+                            "active": true,
+                            "input_type": "short_text",
+                            "description": "hellooo",
+                            "input_hint": "placeholder",
+                            "parent_id": null,
+                            "required": true,
+                            "variant": false
+                        },
+                        {
+                            "id": "637bd8068112c28cbb634de3",
+                            "values": [],
+                            "name": "long text",
+                            "active": true,
+                            "input_type": "long_text",
+                            "input_hint": null,
+                            "parent_id": "637bd8128112c28cbb634de4",
+                            "description": null,
+                            "required": false,
+                            "variant": false
+                        },
+                        {
+                            "id": "637bd8128112c28cbb634de4",
+                            "values": [
+                                {
+                                    "id": null,
+                                    "name": "toggle",
+                                    "price": 150,
+                                    "shipment_weight": 300
+                                }
+                            ],
+                            "name": "toggle",
+                            "active": true,
+                            "input_type": "toggle",
+                            "variant": true,
+                            "description": "theres a description",
+                            "required": false,
+                            "parent_id": null,
+                            "attribute_id": "toggle"
+                        }
+                    ],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "sale": true,
+                    "sale_price": 15,
+                    "prices": [
+                        {
+                            "price": 5,
+                            "quantity_min": 20,
+                            "quantity_max": 50
+                        }
+                    ],
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-11-21T20:00:57.643Z",
+                    "stock_status": null,
+                    "date_updated": "2022-11-21T20:00:57.928Z",
+                    "category_index": {
+                        "sort": {
+                            "637bd7145890f40012bfb666": 0
+                        },
+                        "id": [
+                            "637bd7145890f40012bfb666"
+                        ]
+                    },
+                    "id": "637bd8f91a71b700129a6419"
+                },
+                "variant": {
+                    "parent_id": "637bd8f91a71b700129a6419",
+                    "name": "s, blue",
+                    "active": true,
+                    "option_value_ids": [
+                        "637bd8f98112c28cbb634de8",
+                        "637bd8f98112c28cbb634ded"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-11-21T20:00:57.692Z",
+                    "id": "637bd8f91a71b700129a641f"
+                }
+            },
+            {
+                "product_id": "637bdd5b6664c70012b11d1e",
+                "variant_id": null,
+                "options": [],
+                "quantity": 1,
+                "id": "637d5aabe55ee300157b1b29",
+                "price": 150,
+                "orig_price": 150,
+                "bundle_items": [
+                    {
+                        "id": "637bdd5b6664c70012b11d1c",
+                        "quantity": 2,
+                        "quantity_total": 2,
+                        "product_id": "632ac7e82991dd0013ff99a7",
+                        "delivery": "shipment"
+                    },
+                    {
+                        "id": "637bdd5b6664c70012b11d1d",
+                        "quantity": 1,
+                        "quantity_total": 1,
+                        "product_id": "632dfabec21a380012423429",
+                        "variant_id": "632dfabec21a38001242342b",
+                        "delivery": "shipment"
+                    }
+                ],
+                "shipment_weight": 0,
+                "product_name": "bundle everything",
+                "variant": null,
+                "product": {
+                    "name": "bundle everything",
+                    "sku": null,
+                    "type": "bundle",
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "subscription": {
+                            "active": true,
+                            "plans": [
+                                {
+                                    "name": "Monthly",
+                                    "description": null,
+                                    "price": 150,
+                                    "billing_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "limit": null,
+                                        "trial_days": 0
+                                    },
+                                    "id": "637bdd5b6664c70012b11d1f",
+                                    "active": true
+                                }
+                            ]
+                        }
+                    },
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "bundle-everything",
+                    "attributes": {},
+                    "bundle_items": [
+                        {
+                            "product_id": "632ac7e82991dd0013ff99a7",
+                            "variant_id": null,
+                            "options": [],
+                            "quantity": 2,
+                            "variable": "choose",
+                            "id": "637bdd5b6664c70012b11d1c",
+                            "price": 2,
+                            "orig_price": 2,
+                            "delivery": "shipment",
+                            "shipment_weight": 0,
+                            "product_name": "qua"
+                        },
+                        {
+                            "product_id": "632dfabec21a380012423429",
+                            "variant_id": "632dfabec21a38001242342b",
+                            "options": [
+                                {
+                                    "id": "632dfab3328ee7426844fe25",
+                                    "value": "big",
+                                    "name": "size",
+                                    "variant": true,
+                                    "value_id": "632dfabd328ee7426844fe27",
+                                    "price": 5
+                                }
+                            ],
+                            "quantity": 1,
+                            "variable": "specific",
+                            "id": "637bdd5b6664c70012b11d1d",
+                            "price": 20,
+                            "orig_price": 20,
+                            "delivery": "shipment",
+                            "shipment_weight": 0,
+                            "product_name": "test orig price"
+                        }
+                    ],
+                    "bundle": true,
+                    "delivery": "shipment",
+                    "virtual": true,
+                    "price": 150,
+                    "stock_tracking": false,
+                    "options": [],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "shipment_delivery": true,
+                    "currency": "USD",
+                    "date_created": "2022-11-21T20:19:39.587Z",
+                    "stock_status": null,
+                    "id": "637bdd5b6664c70012b11d1e"
+                }
+            }
+        ],
+        "up_sells": [
+            {
+                "id": "637d5a91fbcebbc3fb7d778f",
+                "product_id": "637bd8f91a71b700129a6419",
+                "product": {
+                    "name": "everything product",
+                    "sku": null,
+                    "active": true,
+                    "images": [
+                        {
+                            "file": {
+                                "id": "637bd7696664c70012b11b7b",
+                                "date_uploaded": "2022-11-21T19:54:17.187Z",
+                                "length": 287464,
+                                "md5": "9b94ffe8264410509905512aa0caf9ef",
+                                "filename": null,
+                                "content_type": "image/jpeg",
+                                "metadata": null,
+                                "url": "https://cdn.schema.io/test-staging/637bd7696664c70012b11b7b/9b94ffe8264410509905512aa0caf9ef",
+                                "width": 566,
+                                "height": 426
+                            },
+                            "id": "637bd8f91a71b700129a641c"
+                        }
+                    ],
+                    "purchase_options": {
+                        "standard": {
+                            "active": true,
+                            "price": 30,
+                            "sale": true,
+                            "sale_price": 15,
+                            "prices": [
+                                {
+                                    "price": 5,
+                                    "quantity_min": 20,
+                                    "quantity_max": 50
+                                }
+                            ]
+                        },
+                        "subscription": {
+                            "active": true,
+                            "plans": [
+                                {
+                                    "name": "Monthly",
+                                    "description": "Description",
+                                    "price": 25,
+                                    "billing_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "limit": 200,
+                                        "trial_days": 3
+                                    },
+                                    "has_order_schedule": true,
+                                    "order_schedule": {
+                                        "interval": "monthly",
+                                        "interval_count": 1,
+                                        "limit": 150
+                                    },
+                                    "id": "637bd8f91a71b700129a641a",
+                                    "active": true
+                                },
+                                {
+                                    "name": "Yearly",
+                                    "description": null,
+                                    "price": 150,
+                                    "billing_schedule": {
+                                        "interval": "yearly",
+                                        "interval_count": 3,
+                                        "limit": null,
+                                        "trial_days": 0
+                                    },
+                                    "id": "637bd8f91a71b700129a641b",
+                                    "active": true
+                                }
+                            ]
+                        }
+                    },
+                    "variable": true,
+                    "description": "<strong>This is a nice <em>product</em></strong><ul><li><strong>wow!<br></strong></li><li>cool</li></ul>",
+                    "tags": [
+                        "product",
+                        "tag",
+                        "everything"
+                    ],
+                    "meta_title": "everything product",
+                    "meta_description": "Meta description of everything product",
+                    "slug": "everything-product",
+                    "attributes": {
+                        "undefined": "Huskee",
+                        "brand": "Huskee",
+                        "manufacturer": "adidas",
+                        "toggle": [
+                            "toggle"
+                        ],
+                        "size": [
+                            "s",
+                            "m",
+                            "l"
+                        ],
+                        "color": [
+                            "green",
+                            "red",
+                            "blue"
+                        ]
+                    },
+                    "up_sells": [
+                        {
+                            "id": "637bd8448112c28cbb634de5",
+                            "product_id": "637bd733997291001230dad6"
+                        }
+                    ],
+                    "cross_sells": [
+                        {
+                            "id": "637bd8498112c28cbb634de6",
+                            "product_id": "632dfabec21a380012423429",
+                            "discount_type": "fixed",
+                            "discount_amount": 10
+                        },
+                        {
+                            "id": "637bd86e8112c28cbb634de7",
+                            "product_id": "637bd733997291001230dad6",
+                            "discount_type": "fixed",
+                            "discount_amount": null
+                        }
+                    ],
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 30,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "637bd7d28112c28cbb634de0",
+                            "values": [
+                                {
+                                    "id": "637bd8f98112c28cbb634de8",
+                                    "name": "s"
+                                },
+                                {
+                                    "id": "637bd8f98112c28cbb634de9",
+                                    "name": "m"
+                                },
+                                {
+                                    "id": "637bd8f98112c28cbb634dea",
+                                    "name": "l"
+                                }
+                            ],
+                            "name": "size",
+                            "active": true,
+                            "input_type": "select",
+                            "variant": true,
+                            "description": "Product size",
+                            "required": true,
+                            "attribute_id": "size"
+                        },
+                        {
+                            "id": "637bd7d78112c28cbb634de1",
+                            "name": "color",
+                            "values": [
+                                {
+                                    "id": "637bd8f98112c28cbb634deb",
+                                    "name": "green"
+                                },
+                                {
+                                    "id": "637bd8f98112c28cbb634dec",
+                                    "name": "red"
+                                },
+                                {
+                                    "id": "637bd8f98112c28cbb634ded",
+                                    "name": "blue"
+                                }
+                            ],
+                            "variant": true,
+                            "input_type": "select",
+                            "required": true,
+                            "active": true,
+                            "attribute_id": "color"
+                        },
+                        {
+                            "id": "637bd7f18112c28cbb634de2",
+                            "values": [],
+                            "name": "text",
+                            "active": true,
+                            "input_type": "short_text",
+                            "description": "hellooo",
+                            "input_hint": "placeholder",
+                            "parent_id": null,
+                            "required": true,
+                            "variant": false
+                        },
+                        {
+                            "id": "637bd8068112c28cbb634de3",
+                            "values": [],
+                            "name": "long text",
+                            "active": true,
+                            "input_type": "long_text",
+                            "input_hint": null,
+                            "parent_id": "637bd8128112c28cbb634de4",
+                            "description": null,
+                            "required": false,
+                            "variant": false
+                        },
+                        {
+                            "id": "637bd8128112c28cbb634de4",
+                            "values": [
+                                {
+                                    "id": null,
+                                    "name": "toggle",
+                                    "price": 150,
+                                    "shipment_weight": 300
+                                }
+                            ],
+                            "name": "toggle",
+                            "active": true,
+                            "input_type": "toggle",
+                            "variant": true,
+                            "description": "theres a description",
+                            "required": false,
+                            "parent_id": null,
+                            "attribute_id": "toggle"
+                        }
+                    ],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "sale": true,
+                    "sale_price": 15,
+                    "prices": [
+                        {
+                            "price": 5,
+                            "quantity_min": 20,
+                            "quantity_max": 50
+                        }
+                    ],
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-11-21T20:00:57.643Z",
+                    "stock_status": null,
+                    "date_updated": "2022-11-21T20:00:57.928Z",
+                    "category_index": {
+                        "sort": {
+                            "637bd7145890f40012bfb666": 0
+                        },
+                        "id": [
+                            "637bd7145890f40012bfb666"
+                        ]
+                    },
+                    "id": "637bd8f91a71b700129a6419"
+                }
+            }
+        ],
+        "cross_sells": [
+            {
+                "id": "637d5a96fbcebbc3fb7d7790",
+                "product_id": "632ac7e82991dd0013ff99a7",
+                "discount_type": "fixed",
+                "discount_amount": 12,
+                "product": {
+                    "purchase_options": {
+                        "standard": {
+                            "active": true,
+                            "price": 2,
+                            "sale": false,
+                            "sale_price": null,
+                            "prices": []
+                        }
+                    },
+                    "name": "qua",
+                    "sku": null,
+                    "active": true,
+                    "tax_code": null,
+                    "cost": null,
+                    "vendor": null,
+                    "variable": true,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "qua",
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 2,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "632ac7c7d30f641cb673d355",
+                            "name": "Type",
+                            "values": [
+                                {
+                                    "id": "632ac7e6d30f641cb673d356",
+                                    "name": "Small"
+                                },
+                                {
+                                    "id": "632ac7e6d30f641cb673d357",
+                                    "name": "Medium"
+                                },
+                                {
+                                    "id": "632ac7e6d30f641cb673d358",
+                                    "name": "Large"
+                                }
+                            ],
+                            "variant": true,
+                            "input_type": "select",
+                            "required": true,
+                            "active": true,
+                            "attribute_id": "type"
+                        }
+                    ],
+                    "content": {
+                        "custom_field": null,
+                        "color": null,
+                        "vendor": null
+                    },
+                    "another_field": null,
+                    "bubble": {
+                        "custom_field": null
+                    },
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-09-21T08:14:32.358Z",
+                    "date_updated": "2022-09-23T19:41:44.003Z",
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": [],
+                    "stock_status": null,
+                    "attributes": {
+                        "type": [
+                            "Small",
+                            "Medium",
+                            "Large"
+                        ]
+                    },
+                    "id": "632ac7e82991dd0013ff99a7"
+                }
+            }
+        ],
+        "bundle": true,
+        "delivery": "shipment",
+        "virtual": true,
+        "price": 12,
+        "stock_tracking": false,
+        "options": [
+            {
+                "id": "637d5a88fbcebbc3fb7d778e",
+                "name": "size",
+                "values": [
+                    {
+                        "id": "637d5aabfbcebbc3fb7d7791",
+                        "name": "small"
+                    },
+                    {
+                        "id": "637d5aabfbcebbc3fb7d7792",
+                        "name": "medium"
+                    }
+                ],
+                "variant": true,
+                "input_type": "select",
+                "required": true,
+                "active": true,
+                "attribute_id": "size"
+            }
+        ],
+        "content": {
+            "just_anything": null
+        },
+        "benefits_test": [],
+        "shipment_delivery": true,
+        "currency": "USD",
+        "date_created": "2022-11-22T23:26:35.458Z",
+        "stock_status": null,
+        "date_updated": "2022-11-22T23:26:35.689Z",
+        "category_index": {
+            "sort": {
+                "5e31dbe2ae1309046a52f343": 0
+            },
+            "id": [
+                "5e31dbe2ae1309046a52f343"
+            ]
+        },
+        "id": "637d5aabe55ee300157b1b2a",
+        "category": null,
+        "variants": {
+            "count": 2,
+            "results": [
+                {
+                    "parent_id": "637d5aabe55ee300157b1b2a",
+                    "name": "medium",
+                    "active": true,
+                    "option_value_ids": [
+                        "637d5aabfbcebbc3fb7d7792"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-11-22T23:26:35.503Z",
+                    "id": "637d5aabe55ee300157b1b2f"
+                },
+                {
+                    "parent_id": "637d5aabe55ee300157b1b2a",
+                    "name": "small",
+                    "active": true,
+                    "option_value_ids": [
+                        "637d5aabfbcebbc3fb7d7791"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-11-22T23:26:35.503Z",
+                    "id": "637d5aabe55ee300157b1b2e"
+                }
+            ],
+            "page": 1
+        },
+        "categories": {
+            "count": 1,
+            "results": [
+                {
+                    "parent_id": "5e31dbe2ae1309046a52f343",
+                    "product_id": "637d5aabe55ee300157b1b2a",
+                    "date_created": "2022-11-22T23:26:35.681Z",
+                    "id": "637d5aabe8b33f0013e54348"
+                }
+            ],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "bundle everything",
+        "sku": null,
+        "type": "bundle",
+        "active": true,
+        "images": null,
+        "purchase_options": {
+            "subscription": {
+                "active": true,
+                "plans": [
+                    {
+                        "name": "Monthly",
+                        "description": null,
+                        "price": 150,
+                        "billing_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "limit": null,
+                            "trial_days": 0
+                        },
+                        "id": "637bdd5b6664c70012b11d1f",
+                        "active": true
+                    }
+                ]
+            }
+        },
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "bundle-everything",
+        "attributes": {},
+        "bundle_items": [
+            {
+                "product_id": "632ac7e82991dd0013ff99a7",
+                "variant_id": null,
+                "options": [],
+                "quantity": 2,
+                "variable": "choose",
+                "id": "637bdd5b6664c70012b11d1c",
+                "price": 2,
+                "orig_price": 2,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "qua",
+                "variant": null,
+                "product": {
+                    "purchase_options": {
+                        "standard": {
+                            "active": true,
+                            "price": 2,
+                            "sale": false,
+                            "sale_price": null,
+                            "prices": []
+                        }
+                    },
+                    "name": "qua",
+                    "sku": null,
+                    "active": true,
+                    "tax_code": null,
+                    "cost": null,
+                    "vendor": null,
+                    "variable": true,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "qua",
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 2,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "632ac7c7d30f641cb673d355",
+                            "name": "Type",
+                            "values": [
+                                {
+                                    "id": "632ac7e6d30f641cb673d356",
+                                    "name": "Small"
+                                },
+                                {
+                                    "id": "632ac7e6d30f641cb673d357",
+                                    "name": "Medium"
+                                },
+                                {
+                                    "id": "632ac7e6d30f641cb673d358",
+                                    "name": "Large"
+                                }
+                            ],
+                            "variant": true,
+                            "input_type": "select",
+                            "required": true,
+                            "active": true,
+                            "attribute_id": "type"
+                        }
+                    ],
+                    "content": {
+                        "custom_field": null,
+                        "color": null,
+                        "vendor": null
+                    },
+                    "another_field": null,
+                    "bubble": {
+                        "custom_field": null
+                    },
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-09-21T08:14:32.358Z",
+                    "date_updated": "2022-09-23T19:41:44.003Z",
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": [],
+                    "stock_status": null,
+                    "attributes": {
+                        "type": [
+                            "Small",
+                            "Medium",
+                            "Large"
+                        ]
+                    },
+                    "id": "632ac7e82991dd0013ff99a7"
+                }
+            },
+            {
+                "product_id": "632dfabec21a380012423429",
+                "variant_id": "632dfabec21a38001242342b",
+                "options": [
+                    {
+                        "id": "632dfab3328ee7426844fe25",
+                        "value": "big",
+                        "name": "size",
+                        "variant": true,
+                        "value_id": "632dfabd328ee7426844fe27",
+                        "price": 5
+                    }
+                ],
+                "quantity": 1,
+                "variable": "specific",
+                "id": "637bdd5b6664c70012b11d1d",
+                "price": 20,
+                "orig_price": 20,
+                "delivery": "shipment",
+                "shipment_weight": 0,
+                "product_name": "test orig price",
+                "product": {
+                    "name": "test orig price",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "standard": {
+                            "active": true,
+                            "price": 20,
+                            "sale": true,
+                            "sale_price": 15,
+                            "prices": []
+                        }
+                    },
+                    "variable": true,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "test-orig-price",
+                    "attributes": {
+                        "size": [
+                            "small",
+                            "big"
+                        ]
+                    },
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 20,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "632dfab3328ee7426844fe25",
+                            "values": [
+                                {
+                                    "id": "632dfabd328ee7426844fe26",
+                                    "name": "small"
+                                },
+                                {
+                                    "id": "632dfabd328ee7426844fe27",
+                                    "name": "big",
+                                    "price": 5,
+                                    "shipment_weight": null,
+                                    "description": null
+                                }
+                            ],
+                            "name": "size",
+                            "active": true,
+                            "input_type": "select",
+                            "variant": true,
+                            "description": null,
+                            "required": true,
+                            "attribute_id": "size"
+                        }
+                    ],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "sale": true,
+                    "sale_price": 15,
+                    "prices": [],
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-09-23T18:28:14.200Z",
+                    "stock_status": null,
+                    "date_updated": "2022-09-23T18:28:35.799Z",
+                    "id": "632dfabec21a380012423429"
+                },
+                "variant": {
+                    "parent_id": "632dfabec21a380012423429",
+                    "name": "big",
+                    "active": true,
+                    "option_value_ids": [
+                        "632dfabd328ee7426844fe27"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-09-23T18:28:14.250Z",
+                    "date_updated": "2022-09-23T18:28:33.218Z",
+                    "sku": null,
+                    "id": "632dfabec21a38001242342b"
+                }
+            }
+        ],
+        "bundle": true,
+        "delivery": "shipment",
+        "virtual": true,
+        "price": 150,
+        "stock_tracking": false,
+        "options": [],
+        "content": {
+            "just_anything": null
+        },
+        "benefits_test": [],
+        "shipment_delivery": true,
+        "currency": "USD",
+        "date_created": "2022-11-21T20:19:39.587Z",
+        "stock_status": null,
+        "id": "637bdd5b6664c70012b11d1e",
+        "category": null,
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "everything product",
+        "sku": null,
+        "active": true,
+        "images": [
+            {
+                "file": {
+                    "id": "637bd7696664c70012b11b7b",
+                    "date_uploaded": "2022-11-21T19:54:17.187Z",
+                    "length": 287464,
+                    "md5": "9b94ffe8264410509905512aa0caf9ef",
+                    "filename": null,
+                    "content_type": "image/jpeg",
+                    "metadata": null,
+                    "url": "https://cdn.schema.io/test-staging/637bd7696664c70012b11b7b/9b94ffe8264410509905512aa0caf9ef",
+                    "width": 566,
+                    "height": 426
+                },
+                "id": "637bd8f91a71b700129a641c"
+            }
+        ],
+        "purchase_options": {
+            "standard": {
+                "active": true,
+                "price": 30,
+                "sale": true,
+                "sale_price": 15,
+                "prices": [
+                    {
+                        "price": 5,
+                        "quantity_min": 20,
+                        "quantity_max": 50
+                    }
+                ]
+            },
+            "subscription": {
+                "active": true,
+                "plans": [
+                    {
+                        "name": "Monthly",
+                        "description": "Description",
+                        "price": 25,
+                        "billing_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "limit": 200,
+                            "trial_days": 3
+                        },
+                        "has_order_schedule": true,
+                        "order_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "limit": 150
+                        },
+                        "id": "637bd8f91a71b700129a641a",
+                        "active": true
+                    },
+                    {
+                        "name": "Yearly",
+                        "description": null,
+                        "price": 150,
+                        "billing_schedule": {
+                            "interval": "yearly",
+                            "interval_count": 3,
+                            "limit": null,
+                            "trial_days": 0
+                        },
+                        "id": "637bd8f91a71b700129a641b",
+                        "active": true
+                    }
+                ]
+            }
+        },
+        "variable": true,
+        "description": "<strong>This is a nice <em>product</em></strong><ul><li><strong>wow!<br></strong></li><li>cool</li></ul>",
+        "tags": [
+            "product",
+            "tag",
+            "everything"
+        ],
+        "meta_title": "everything product",
+        "meta_description": "Meta description of everything product",
+        "slug": "everything-product",
+        "attributes": {
+            "undefined": "Huskee",
+            "brand": "Huskee",
+            "manufacturer": "adidas",
+            "toggle": [
+                "toggle"
+            ],
+            "size": [
+                "s",
+                "m",
+                "l"
+            ],
+            "color": [
+                "green",
+                "red",
+                "blue"
+            ]
+        },
+        "up_sells": [
+            {
+                "id": "637bd8448112c28cbb634de5",
+                "product_id": "637bd733997291001230dad6",
+                "product": {
+                    "name": "empty product",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {},
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "empty-product",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 0,
+                    "stock_tracking": false,
+                    "options": [],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-11-21T19:53:23.119Z",
+                    "stock_status": null,
+                    "category_index": {
+                        "sort": {
+                            "637bd7145890f40012bfb666": 0
+                        },
+                        "id": [
+                            "637bd7145890f40012bfb666"
+                        ]
+                    },
+                    "date_updated": "2022-11-21T19:53:23.638Z",
+                    "id": "637bd733997291001230dad6"
+                }
+            }
+        ],
+        "cross_sells": [
+            {
+                "id": "637bd8498112c28cbb634de6",
+                "product_id": "632dfabec21a380012423429",
+                "discount_type": "fixed",
+                "discount_amount": 10,
+                "product": {
+                    "name": "test orig price",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {
+                        "standard": {
+                            "active": true,
+                            "price": 20,
+                            "sale": true,
+                            "sale_price": 15,
+                            "prices": []
+                        }
+                    },
+                    "variable": true,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "test-orig-price",
+                    "attributes": {
+                        "size": [
+                            "small",
+                            "big"
+                        ]
+                    },
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 20,
+                    "stock_tracking": false,
+                    "options": [
+                        {
+                            "id": "632dfab3328ee7426844fe25",
+                            "values": [
+                                {
+                                    "id": "632dfabd328ee7426844fe26",
+                                    "name": "small"
+                                },
+                                {
+                                    "id": "632dfabd328ee7426844fe27",
+                                    "name": "big",
+                                    "price": 5,
+                                    "shipment_weight": null,
+                                    "description": null
+                                }
+                            ],
+                            "name": "size",
+                            "active": true,
+                            "input_type": "select",
+                            "variant": true,
+                            "description": null,
+                            "required": true,
+                            "attribute_id": "size"
+                        }
+                    ],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "sale": true,
+                    "sale_price": 15,
+                    "prices": [],
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-09-23T18:28:14.200Z",
+                    "stock_status": null,
+                    "date_updated": "2022-09-23T18:28:35.799Z",
+                    "id": "632dfabec21a380012423429"
+                }
+            },
+            {
+                "id": "637bd86e8112c28cbb634de7",
+                "product_id": "637bd733997291001230dad6",
+                "discount_type": "fixed",
+                "discount_amount": null,
+                "product": {
+                    "name": "empty product",
+                    "sku": null,
+                    "active": true,
+                    "images": null,
+                    "purchase_options": {},
+                    "variable": false,
+                    "description": null,
+                    "tags": [],
+                    "meta_title": null,
+                    "meta_description": null,
+                    "slug": "empty-product",
+                    "attributes": {},
+                    "delivery": "shipment",
+                    "bundle": null,
+                    "price": 0,
+                    "stock_tracking": false,
+                    "options": [],
+                    "content": {
+                        "just_anything": null
+                    },
+                    "benefits_test": [],
+                    "currency": "USD",
+                    "type": "standard",
+                    "tax_class": "standard",
+                    "date_created": "2022-11-21T19:53:23.119Z",
+                    "stock_status": null,
+                    "category_index": {
+                        "sort": {
+                            "637bd7145890f40012bfb666": 0
+                        },
+                        "id": [
+                            "637bd7145890f40012bfb666"
+                        ]
+                    },
+                    "date_updated": "2022-11-21T19:53:23.638Z",
+                    "id": "637bd733997291001230dad6"
+                }
+            }
+        ],
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 30,
+        "stock_tracking": false,
+        "options": [
+            {
+                "id": "637bd7d28112c28cbb634de0",
+                "values": [
+                    {
+                        "id": "637bd8f98112c28cbb634de8",
+                        "name": "s"
+                    },
+                    {
+                        "id": "637bd8f98112c28cbb634de9",
+                        "name": "m"
+                    },
+                    {
+                        "id": "637bd8f98112c28cbb634dea",
+                        "name": "l"
+                    }
+                ],
+                "name": "size",
+                "active": true,
+                "input_type": "select",
+                "variant": true,
+                "description": "Product size",
+                "required": true,
+                "attribute_id": "size"
+            },
+            {
+                "id": "637bd7d78112c28cbb634de1",
+                "name": "color",
+                "values": [
+                    {
+                        "id": "637bd8f98112c28cbb634deb",
+                        "name": "green"
+                    },
+                    {
+                        "id": "637bd8f98112c28cbb634dec",
+                        "name": "red"
+                    },
+                    {
+                        "id": "637bd8f98112c28cbb634ded",
+                        "name": "blue"
+                    }
+                ],
+                "variant": true,
+                "input_type": "select",
+                "required": true,
+                "active": true,
+                "attribute_id": "color"
+            },
+            {
+                "id": "637bd7f18112c28cbb634de2",
+                "values": [],
+                "name": "text",
+                "active": true,
+                "input_type": "short_text",
+                "description": "hellooo",
+                "input_hint": "placeholder",
+                "parent_id": null,
+                "required": true,
+                "variant": false
+            },
+            {
+                "id": "637bd8068112c28cbb634de3",
+                "values": [],
+                "name": "long text",
+                "active": true,
+                "input_type": "long_text",
+                "input_hint": null,
+                "parent_id": "637bd8128112c28cbb634de4",
+                "description": null,
+                "required": false,
+                "variant": false
+            },
+            {
+                "id": "637bd8128112c28cbb634de4",
+                "values": [
+                    {
+                        "id": null,
+                        "name": "toggle",
+                        "price": 150,
+                        "shipment_weight": 300
+                    }
+                ],
+                "name": "toggle",
+                "active": true,
+                "input_type": "toggle",
+                "variant": true,
+                "description": "theres a description",
+                "required": false,
+                "parent_id": null,
+                "attribute_id": "toggle"
+            }
+        ],
+        "content": {
+            "just_anything": null
+        },
+        "benefits_test": [],
+        "currency": "USD",
+        "sale": true,
+        "sale_price": 15,
+        "prices": [
+            {
+                "price": 5,
+                "quantity_min": 20,
+                "quantity_max": 50
+            }
+        ],
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-11-21T20:00:57.643Z",
+        "stock_status": null,
+        "date_updated": "2022-11-21T20:00:57.928Z",
+        "category_index": {
+            "sort": {
+                "637bd7145890f40012bfb666": 0
+            },
+            "id": [
+                "637bd7145890f40012bfb666"
+            ]
+        },
+        "id": "637bd8f91a71b700129a6419",
+        "category": null,
+        "variants": {
+            "count": 9,
+            "results": [
+                {
+                    "parent_id": "637bd8f91a71b700129a6419",
+                    "name": "l, blue",
+                    "active": true,
+                    "option_value_ids": [
+                        "637bd8f98112c28cbb634dea",
+                        "637bd8f98112c28cbb634ded"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-11-21T20:00:57.708Z",
+                    "id": "637bd8f91a71b700129a6425"
+                },
+                {
+                    "parent_id": "637bd8f91a71b700129a6419",
+                    "name": "l, red",
+                    "active": true,
+                    "option_value_ids": [
+                        "637bd8f98112c28cbb634dea",
+                        "637bd8f98112c28cbb634dec"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-11-21T20:00:57.707Z",
+                    "id": "637bd8f91a71b700129a6424"
+                },
+                {
+                    "parent_id": "637bd8f91a71b700129a6419",
+                    "name": "l, green",
+                    "active": true,
+                    "option_value_ids": [
+                        "637bd8f98112c28cbb634dea",
+                        "637bd8f98112c28cbb634deb"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-11-21T20:00:57.706Z",
+                    "id": "637bd8f91a71b700129a6423"
+                },
+                {
+                    "parent_id": "637bd8f91a71b700129a6419",
+                    "name": "m, blue",
+                    "active": true,
+                    "option_value_ids": [
+                        "637bd8f98112c28cbb634de9",
+                        "637bd8f98112c28cbb634ded"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-11-21T20:00:57.701Z",
+                    "id": "637bd8f91a71b700129a6422"
+                },
+                {
+                    "parent_id": "637bd8f91a71b700129a6419",
+                    "name": "m, red",
+                    "active": true,
+                    "option_value_ids": [
+                        "637bd8f98112c28cbb634de9",
+                        "637bd8f98112c28cbb634dec"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-11-21T20:00:57.700Z",
+                    "id": "637bd8f91a71b700129a6421"
+                }
+            ],
+            "page": 1,
+            "pages": {
+                "1": {
+                    "start": 1,
+                    "end": 5
+                },
+                "2": {
+                    "start": 6,
+                    "end": 9
+                }
+            }
+        },
+        "categories": {
+            "count": 1,
+            "results": [
+                {
+                    "parent_id": "637bd7145890f40012bfb666",
+                    "product_id": "637bd8f91a71b700129a6419",
+                    "date_created": "2022-11-21T20:00:57.922Z",
+                    "id": "637bd8f95890f40012bfb78b"
+                }
+            ],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "empty product",
+        "sku": null,
+        "active": true,
+        "images": null,
+        "purchase_options": {},
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "empty-product",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 0,
+        "stock_tracking": false,
+        "options": [],
+        "content": {
+            "just_anything": null
+        },
+        "benefits_test": [],
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-11-21T19:53:23.119Z",
+        "stock_status": null,
+        "category_index": {
+            "sort": {
+                "637bd7145890f40012bfb666": 0
+            },
+            "id": [
+                "637bd7145890f40012bfb666"
+            ]
+        },
+        "date_updated": "2022-11-21T19:53:23.638Z",
+        "id": "637bd733997291001230dad6",
+        "category": null,
+        "categories": {
+            "count": 1,
+            "results": [
+                {
+                    "parent_id": "637bd7145890f40012bfb666",
+                    "product_id": "637bd733997291001230dad6",
+                    "date_created": "2022-11-21T19:53:23.628Z",
+                    "id": "637bd7334bc51800126d72cf"
+                }
+            ],
+            "page": 1
+        },
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "test orig price",
+        "sku": null,
+        "active": true,
+        "images": null,
+        "purchase_options": {
+            "standard": {
+                "active": true,
+                "price": 20,
+                "sale": true,
+                "sale_price": 15,
+                "prices": []
+            }
+        },
+        "variable": true,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "test-orig-price",
+        "attributes": {
+            "size": [
+                "small",
+                "big"
+            ]
+        },
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 20,
+        "stock_tracking": false,
+        "options": [
+            {
+                "id": "632dfab3328ee7426844fe25",
+                "values": [
+                    {
+                        "id": "632dfabd328ee7426844fe26",
+                        "name": "small"
+                    },
+                    {
+                        "id": "632dfabd328ee7426844fe27",
+                        "name": "big",
+                        "price": 5,
+                        "shipment_weight": null,
+                        "description": null
+                    }
+                ],
+                "name": "size",
+                "active": true,
+                "input_type": "select",
+                "variant": true,
+                "description": null,
+                "required": true,
+                "attribute_id": "size"
+            }
+        ],
+        "content": {
+            "just_anything": null
+        },
+        "benefits_test": [],
+        "currency": "USD",
+        "sale": true,
+        "sale_price": 15,
+        "prices": [],
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-09-23T18:28:14.200Z",
+        "stock_status": null,
+        "date_updated": "2022-09-23T18:28:35.799Z",
+        "id": "632dfabec21a380012423429",
+        "category": null,
+        "variants": {
+            "count": 2,
+            "results": [
+                {
+                    "parent_id": "632dfabec21a380012423429",
+                    "name": "big",
+                    "active": true,
+                    "option_value_ids": [
+                        "632dfabd328ee7426844fe27"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-09-23T18:28:14.250Z",
+                    "date_updated": "2022-09-23T18:28:33.218Z",
+                    "sku": null,
+                    "id": "632dfabec21a38001242342b"
+                },
+                {
+                    "parent_id": "632dfabec21a380012423429",
+                    "name": "small",
+                    "active": true,
+                    "option_value_ids": [
+                        "632dfabd328ee7426844fe26"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-09-23T18:28:14.250Z",
+                    "date_updated": "2022-09-23T18:28:35.793Z",
+                    "sku": null,
+                    "id": "632dfabec21a38001242342a"
+                }
+            ],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "purchase_options": {
+            "standard": {
+                "active": true,
+                "price": 2,
+                "sale": false,
+                "sale_price": null,
+                "prices": []
+            }
+        },
+        "name": "qua",
+        "sku": null,
+        "active": true,
+        "tax_code": null,
+        "cost": null,
+        "vendor": null,
+        "variable": true,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "qua",
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 2,
+        "stock_tracking": false,
+        "options": [
+            {
+                "id": "632ac7c7d30f641cb673d355",
+                "name": "Type",
+                "values": [
+                    {
+                        "id": "632ac7e6d30f641cb673d356",
+                        "name": "Small"
+                    },
+                    {
+                        "id": "632ac7e6d30f641cb673d357",
+                        "name": "Medium"
+                    },
+                    {
+                        "id": "632ac7e6d30f641cb673d358",
+                        "name": "Large"
+                    }
+                ],
+                "variant": true,
+                "input_type": "select",
+                "required": true,
+                "active": true,
+                "attribute_id": "type"
+            }
+        ],
+        "content": {
+            "custom_field": null,
+            "color": null,
+            "vendor": null
+        },
+        "another_field": null,
+        "bubble": {
+            "custom_field": null
+        },
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-09-21T08:14:32.358Z",
+        "date_updated": "2022-09-23T19:41:44.003Z",
+        "sale": false,
+        "sale_price": null,
+        "prices": [],
+        "stock_status": null,
+        "attributes": {
+            "type": [
+                "Small",
+                "Medium",
+                "Large"
+            ]
+        },
+        "id": "632ac7e82991dd0013ff99a7",
+        "category": null,
+        "variants": {
+            "count": 3,
+            "results": [
+                {
+                    "parent_id": "632ac7e82991dd0013ff99a7",
+                    "name": "Large",
+                    "active": true,
+                    "option_value_ids": [
+                        "632ac7e6d30f641cb673d358"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-09-21T08:14:32.573Z",
+                    "date_updated": "2022-09-21T08:58:55.493Z",
+                    "sku": null,
+                    "attributes": {
+                        "original": 1.2
+                    },
+                    "cost": null,
+                    "price": 4,
+                    "prices": [],
+                    "purchase_options": {
+                        "standard": {
+                            "prices": [],
+                            "price": 4,
+                            "sale": true,
+                            "sale_price": 3
+                        }
+                    },
+                    "sale": true,
+                    "sale_price": 3,
+                    "id": "632ac7e82991dd0013ff99aa"
+                },
+                {
+                    "parent_id": "632ac7e82991dd0013ff99a7",
+                    "name": "Medium",
+                    "active": true,
+                    "option_value_ids": [
+                        "632ac7e6d30f641cb673d357"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-09-21T08:14:32.572Z",
+                    "date_updated": "2022-09-21T08:59:42.296Z",
+                    "sku": null,
+                    "attributes": {
+                        "original": 1.44
+                    },
+                    "cost": null,
+                    "price": 5,
+                    "prices": [],
+                    "purchase_options": {
+                        "standard": {
+                            "prices": [],
+                            "price": 5,
+                            "sale": true,
+                            "sale_price": 4.5
+                        }
+                    },
+                    "sale": true,
+                    "sale_price": 4.5,
+                    "id": "632ac7e82991dd0013ff99a9"
+                },
+                {
+                    "parent_id": "632ac7e82991dd0013ff99a7",
+                    "name": "Small",
+                    "active": true,
+                    "option_value_ids": [
+                        "632ac7e6d30f641cb673d356"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-09-21T08:14:32.572Z",
+                    "date_updated": "2022-09-21T08:16:48.373Z",
+                    "sku": null,
+                    "attributes": {},
+                    "cost": null,
+                    "price": 3.5,
+                    "prices": [],
+                    "purchase_options": {
+                        "standard": {
+                            "prices": [],
+                            "price": 3.5,
+                            "sale": false,
+                            "sale_price": null
+                        }
+                    },
+                    "sale": false,
+                    "sale_price": null,
+                    "id": "632ac7e82991dd0013ff99a8"
+                }
+            ],
+            "page": 1
+        },
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "new product one two three",
+        "sku": null,
+        "active": true,
+        "type": "standard",
+        "attributes": {},
+        "delivery": "shipment",
+        "price": 17,
+        "prices": [],
+        "sale": true,
+        "sale_price": 15,
+        "bundle": null,
+        "variable": false,
+        "options": [],
+        "stock_tracking": false,
+        "description": null,
+        "currency": "USD",
+        "slug": "new-product-one-two-three",
+        "tax_class": "standard",
+        "date_created": "2022-03-23T20:02:48.026Z",
+        "stock_status": null,
+        "date_updated": "2022-09-23T16:55:17.570Z",
+        "benefits_test": [],
+        "content": {
+            "just_anything": null
+        },
+        "does_this_work": "Maybe?",
+        "images": null,
+        "meta_description": null,
+        "meta_title": null,
+        "purchase_options": {
+            "standard": {
+                "active": true,
+                "price": 17,
+                "sale": true,
+                "sale_price": 15,
+                "prices": []
+            }
+        },
+        "tags": [],
+        "id": "623b7ce8df7a92013360e577",
+        "category": null,
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "new product one two",
+        "sku": "123",
+        "active": true,
+        "images": null,
+        "purchase_options": {
+            "standard": {
+                "prices": [],
+                "active": true,
+                "price": 15,
+                "sale": false,
+                "sale_price": null
+            }
+        },
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "new-product-one-two",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 15,
+        "stock_tracking": true,
+        "options": [],
+        "benefits_test": [],
+        "currency": "USD",
+        "sale": false,
+        "sale_price": null,
+        "prices": [],
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-03-23T20:02:30.381Z",
+        "stock_status": "out_of_stock",
+        "date_updated": "2022-08-11T18:49:03.579Z",
+        "content": {
+            "test_text": "goodbye world"
+        },
+        "id": "623b7cd6df7a92013360e2c2",
+        "category": null,
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "Test product options",
+        "sku": null,
+        "active": true,
+        "images": null,
+        "purchase_options": {
+            "standard": {
+                "prices": [],
+                "active": true,
+                "price": 12,
+                "sale": false,
+                "sale_price": null
+            }
+        },
+        "variable": true,
+        "description": "What goes in here<br>",
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "test-product-options",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 12,
+        "stock_tracking": false,
+        "options": [
+            {
+                "id": "621d455c826038dca616200b",
+                "name": "Size",
+                "values": [
+                    {
+                        "id": "621d4569826038dca616200c",
+                        "name": "S"
+                    },
+                    {
+                        "id": "621d4569826038dca616200d",
+                        "name": "M"
+                    },
+                    {
+                        "id": "621d4569826038dca616200e",
+                        "name": "L"
+                    }
+                ],
+                "variant": true,
+                "input_type": "select",
+                "required": true,
+                "active": true,
+                "attribute_id": "size"
+            }
+        ],
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-02-28T21:58:01.668Z",
+        "stock_status": null,
+        "date_updated": "2022-08-11T20:30:09.222Z",
+        "benefits_test": [],
+        "prices": [],
+        "sale": false,
+        "sale_price": null,
+        "content": {
+            "just_anything": "hello ana!"
+        },
+        "id": "621d4569800e430132a7df69",
+        "category": null,
+        "variants": {
+            "count": 3,
+            "results": [
+                {
+                    "parent_id": "621d4569800e430132a7df69",
+                    "name": "L",
+                    "active": true,
+                    "option_value_ids": [
+                        "621d4569826038dca616200e"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-02-28T21:58:01.726Z",
+                    "date_updated": "2022-06-15T23:26:50.332Z",
+                    "sku": null,
+                    "id": "621d4569800e430132a7e08d"
+                },
+                {
+                    "parent_id": "621d4569800e430132a7df69",
+                    "name": "M",
+                    "active": true,
+                    "option_value_ids": [
+                        "621d4569826038dca616200d"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-02-28T21:58:01.726Z",
+                    "date_updated": "2022-06-15T23:26:50.335Z",
+                    "sku": null,
+                    "id": "621d4569800e430132a7e08c"
+                },
+                {
+                    "parent_id": "621d4569800e430132a7df69",
+                    "name": "S",
+                    "active": true,
+                    "option_value_ids": [
+                        "621d4569826038dca616200c"
+                    ],
+                    "currency": "USD",
+                    "date_created": "2022-02-28T21:58:01.726Z",
+                    "date_updated": "2022-06-15T23:26:50.338Z",
+                    "sku": null,
+                    "id": "621d4569800e430132a7e08b"
+                }
+            ],
+            "page": 1
+        },
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "new product",
+        "sku": null,
+        "active": true,
+        "images": null,
+        "purchase_options": {
+            "standard": {
+                "active": true,
+                "price": 5,
+                "sale": false,
+                "sale_price": null,
+                "prices": []
+            }
+        },
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "new-product",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 5,
+        "stock_tracking": false,
+        "options": [],
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-02-16T19:10:25.822Z",
+        "stock_status": null,
+        "date_updated": "2022-11-22T21:28:54.317Z",
+        "prices": [],
+        "sale": false,
+        "sale_price": null,
+        "popularity": 218,
+        "id": "620d4c2158bf2701321efb71",
+        "category": null,
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "nina7 subsbs prod",
+        "sku": null,
+        "active": true,
+        "images": [
+            {
+                "file": {
+                    "id": "61f94699c87036013de990c4",
+                    "date_uploaded": "2022-02-01T14:41:29.420Z",
+                    "length": 1566788,
+                    "md5": "d35aca350ffed12d9d2036c858f7639c",
+                    "filename": null,
+                    "content_type": "image/jpeg",
+                    "metadata": null,
+                    "url": "https://cdn.schema.io/test-staging/61f94699c87036013de990c4/d35aca350ffed12d9d2036c858f7639c",
+                    "width": 2049,
+                    "height": 1537
+                },
+                "id": "61f946bc7f11840132869f4f"
+            }
+        ],
+        "purchase_options": {
+            "subscription": {
+                "active": true,
+                "plans": [
+                    {
+                        "name": "Monthly",
+                        "description": null,
+                        "billing_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "trial_days": 2,
+                            "limit": null
+                        },
+                        "price": 50,
+                        "id": "61f946bc7f11840132869f4e",
+                        "active": true
+                    }
+                ]
+            }
+        },
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "nina7-subsbs-prod",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 50,
+        "stock_tracking": false,
+        "options": [],
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-02-01T14:42:04.420Z",
+        "stock_status": null,
+        "category_index": {
+            "sort": {
+                "5e31db1c08eb153204cd4ac3": 0
+            },
+            "id": [
+                "5e31db1c08eb153204cd4ac3"
+            ]
+        },
+        "date_updated": "2022-03-02T14:38:38.494Z",
+        "popularity": 2,
+        "id": "61f946bc7f11840132869f47",
+        "category": null,
+        "categories": {
+            "count": 1,
+            "results": [
+                {
+                    "parent_id": "5e31db1c08eb153204cd4ac3",
+                    "product_id": "61f946bc7f11840132869f47",
+                    "date_created": "2022-02-01T14:42:04.776Z",
+                    "id": "61f946bc7f1184013286a026"
+                }
+            ],
+            "page": 1
+        },
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "dmitry subscription prod 3",
+        "sku": null,
+        "active": true,
+        "images": null,
+        "purchase_options": {
+            "subscription": {
+                "active": true,
+                "plans": [
+                    {
+                        "name": "Monthly",
+                        "description": null,
+                        "billing_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "trial_days": 0,
+                            "limit": null
+                        },
+                        "price": 35,
+                        "id": "61f946a37f11840132868afc",
+                        "active": true
+                    }
+                ]
+            }
+        },
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "dmitry-subscription-prod-3",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 35,
+        "stock_tracking": false,
+        "options": [],
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-02-01T14:41:39.900Z",
+        "stock_status": null,
+        "date_updated": "2022-02-01T14:42:12.547Z",
+        "popularity": 1,
+        "id": "61f946a37f11840132868af8",
+        "category": null,
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "dmitry subscription prod 2",
+        "sku": null,
+        "active": true,
+        "images": null,
+        "purchase_options": {
+            "subscription": {
+                "active": true,
+                "plans": [
+                    {
+                        "name": "Monthly",
+                        "description": null,
+                        "billing_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "trial_days": 0,
+                            "limit": null
+                        },
+                        "price": 25,
+                        "id": "61f9454a69d9c20132e0617c",
+                        "active": true
+                    }
+                ]
+            }
+        },
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "dmitry-subscription-prod-2",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 25,
+        "stock_tracking": false,
+        "options": [],
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-02-01T14:35:54.867Z",
+        "stock_status": null,
+        "date_updated": "2022-11-01T13:38:52.014Z",
+        "popularity": 10,
+        "id": "61f9454a69d9c20132e0600a",
+        "category": null,
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "nina6 subsc prod",
+        "sku": null,
+        "active": true,
+        "images": [
+            {
+                "file": {
+                    "id": "61f9451aa83b9101336e7255",
+                    "date_uploaded": "2022-02-01T14:35:06.992Z",
+                    "length": 1632056,
+                    "md5": "7b5676753769f7a63ef1b0ca3fccf61d",
+                    "filename": null,
+                    "content_type": "image/jpeg",
+                    "metadata": null,
+                    "url": "https://cdn.schema.io/test-staging/61f9451aa83b9101336e7255/7b5676753769f7a63ef1b0ca3fccf61d",
+                    "width": 1537,
+                    "height": 2049
+                },
+                "id": "61f94547a83b9101336f07a0"
+            }
+        ],
+        "purchase_options": {
+            "subscription": {
+                "active": true,
+                "plans": [
+                    {
+                        "name": "Monthly",
+                        "description": null,
+                        "billing_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "trial_days": 1,
+                            "limit": null
+                        },
+                        "price": 50,
+                        "id": "61f94547a83b9101336f079f",
+                        "active": true
+                    }
+                ]
+            }
+        },
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "nina6-subsc-prod",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 50,
+        "stock_tracking": false,
+        "options": [],
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-02-01T14:35:51.906Z",
+        "stock_status": null,
+        "category_index": {
+            "sort": {
+                "5e31db0a08eb153204cd4a1d": 6
+            },
+            "id": [
+                "5e31db0a08eb153204cd4a1d"
+            ]
+        },
+        "date_updated": "2022-11-02T13:38:36.245Z",
+        "popularity": 10,
+        "id": "61f94547a83b9101336f0798",
+        "category": null,
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "categories": {
+            "count": 1,
+            "results": [
+                {
+                    "parent_id": "5e31db0a08eb153204cd4a1d",
+                    "product_id": "61f94547a83b9101336f0798",
+                    "date_created": "2022-02-01T14:35:52.275Z",
+                    "date_updated": "2022-03-17T16:45:10.462Z",
+                    "sort": 6,
+                    "id": "61f94548420f900133c79b75"
+                }
+            ],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    },
+    {
+        "name": "dmitry subscription prod",
+        "sku": null,
+        "active": true,
+        "images": null,
+        "purchase_options": {
+            "subscription": {
+                "active": true,
+                "plans": [
+                    {
+                        "name": "Monthly",
+                        "description": null,
+                        "billing_schedule": {
+                            "interval": "monthly",
+                            "interval_count": 1,
+                            "trial_days": 0,
+                            "limit": null
+                        },
+                        "price": 20,
+                        "id": "61f94061c87036013ddd8b9c",
+                        "active": true
+                    }
+                ]
+            }
+        },
+        "variable": false,
+        "description": null,
+        "tags": [],
+        "meta_title": null,
+        "meta_description": null,
+        "slug": "dmitry-subscription-prod",
+        "attributes": {},
+        "delivery": "shipment",
+        "bundle": null,
+        "price": 20,
+        "stock_tracking": false,
+        "options": [],
+        "currency": "USD",
+        "type": "standard",
+        "tax_class": "standard",
+        "date_created": "2022-02-01T14:14:57.881Z",
+        "stock_status": null,
+        "date_updated": "2022-11-01T13:17:02.277Z",
+        "popularity": 10,
+        "id": "61f94061c87036013ddd8b97",
+        "category": null,
+        "variants": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "categories": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        },
+        "stock": {
+            "count": 0,
+            "results": [],
+            "page": 1
+        }
+    }
+]

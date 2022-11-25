@@ -1,28 +1,31 @@
 import { describe, expect, it } from "vitest";
 import { init } from "./client";
 import defaults from "./defaults.json";
-import type { SwellClientInitOptions } from "./types";
+import type {
+	SwellClientInitOptions,
+	SwellClientInitSnakeCaseOptions,
+} from "./types";
 
 describe("Client Init", () => {
 	it("should throw an error when missing required options", () => {
 		const noKey: Partial<SwellClientInitOptions> = {
 			store: "test-store",
 		};
-		expect(() => init(noKey as SwellClientInitOptions)).toThrowError(
+		expect(() => init(noKey as SwellClientInitSnakeCaseOptions)).toThrowError(
 			'Missing required option: "key"',
 		);
 
 		const noStore: Partial<SwellClientInitOptions> = {
 			key: "test-key",
 		};
-		expect(() => init(noStore as SwellClientInitOptions)).toThrowError(
+		expect(() => init(noStore as SwellClientInitSnakeCaseOptions)).toThrowError(
 			'Missing required option: "store"',
 		);
 
 		const emptyObj: Partial<SwellClientInitOptions> = {};
-		expect(() => init(emptyObj as SwellClientInitOptions)).toThrowError(
-			'Missing required option: "store"',
-		);
+		expect(() =>
+			init(emptyObj as SwellClientInitSnakeCaseOptions),
+		).toThrowError('Missing required option: "store"');
 	});
 
 	it("should contain the required passed in properties", () => {

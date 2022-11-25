@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
+import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
 	build: {
@@ -10,4 +11,5 @@ export default defineConfig({
 			fileName: "swell-js",
 		},
 	},
+	plugins: [tsConfigPaths()],
 });

@@ -1,5 +1,5 @@
 {
 	"vaultUrl": "https://vault.schema.io",
-	"useCamelCase": true,
+	"useCamelCase": false,
 	"previewContent": false
 }

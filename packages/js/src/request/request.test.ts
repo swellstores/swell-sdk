@@ -1,52 +1,77 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { ofetch } from "ofetch";
-import request, { HTTP_METHOD } from ".";
-import { init } from "../client";
-import * as utils from "../utils";
+import request, { HttpMethod } from ".";
+import { init } from "client";
+import * as utils from "internal/utils";
 
 vi.mock("ofetch", () => ({
-	ofetch: vi.fn(),
+	ofetch: vi.fn(() => Promise.resolve({ test: true })),
 }));
 
 describe("request", () => {
+	const client = init({
+		store: "test-store",
+		key: "test-key",
+	});
+
 	afterEach(() => {
 		vi.resetModules();
 		vi.restoreAllMocks();
 	});
 
-	describe("updating cookies prior to the request", () => {
-		const client = init({
-			store: "test-store",
-			key: "test-key",
+	describe("url building", () => {
+		const path = "products";
+
+		it("should call ofetch with the correct url", async () => {
+			await request(client, HttpMethod.Get, path);
+
+			expect(ofetch).toHaveBeenCalledWith(
+				"https://test-store.swell.store/api/products",
+				expect.anything(),
+			);
 		});
 
+		it("should append parsed search params to the url", async () => {
+			await request(client, HttpMethod.Get, path, {
+				searchParams: { page: 1, limit: 10, $filters: { category: ["test"] } },
+			});
+
+			expect(ofetch).toHaveBeenCalledWith(
+				"https://test-store.swell.store/api/products?page=1&limit=10&$filters[category][0]=test",
+				expect.anything(),
+			);
+		});
+	});
+
+	describe("updating cookies prior to the request", () => {
 		const getCookieStub = vi.spyOn(utils, "getCookie");
 
 		describe("request parameters", () => {
-			getCookieStub.mockImplementation((name) => {
-				switch (name) {
-					case "swell-session":
-						return "token-cookie";
-					case "swell-locale":
-						return "locale-cookie";
-					case "swell-currency":
-						return "currency-cookie";
-					default:
-						return undefined;
-				}
-			});
 			it("should use the cookies as a fallback to every missing option", async () => {
-				await expect(
-					request(client, HTTP_METHOD.GET, "/products"),
-				).resolves.not.toThrow();
-				expect(ofetch).toHaveBeenCalledWith(expect.any(String), {
-					method: HTTP_METHOD.GET,
-					headers: {
-						"X-Session": "token-cookie",
-						"X-Locale": "locale-cookie",
-						"X-Currency": "currency-cookie",
-					},
+				getCookieStub.mockImplementation((name) => {
+					switch (name) {
+						case "swell-session":
+							return "token-cookie";
+						case "swell-locale":
+							return "locale-cookie";
+						case "swell-currency":
+							return "currency-cookie";
+					}
+					return undefined;
 				});
+				await expect(
+					request(client, HttpMethod.Get, "/products"),
+				).resolves.not.toThrow();
+				expect(ofetch).toHaveBeenCalledWith(
+					expect.any(String),
+					expect.objectContaining({
+						headers: expect.objectContaining({
+							"X-Session": "token-cookie",
+							"X-Locale": "locale-cookie",
+							"X-Currency": "currency-cookie",
+						}),
+					}),
+				);
 				expect(getCookieStub).toHaveBeenCalledTimes(3);
 				expect(getCookieStub.mock.calls).toEqual(
 					expect.arrayContaining([
@@ -66,16 +91,18 @@ describe("request", () => {
 					sessionToken: "client-token",
 				});
 				await expect(
-					request(clientWithOptions, HTTP_METHOD.GET, "/products"),
+					request(clientWithOptions, HttpMethod.Get, "/products"),
 				).resolves.not.toThrow();
-				expect(ofetch).toHaveBeenCalledWith(expect.any(String), {
-					method: HTTP_METHOD.GET,
-					headers: {
-						"X-Session": "client-token",
-						"X-Locale": "client-locale",
-						"X-Currency": "client-currency",
-					},
-				});
+				expect(ofetch).toHaveBeenCalledWith(
+					expect.any(String),
+					expect.objectContaining({
+						headers: expect.objectContaining({
+							"X-Session": "client-token",
+							"X-Locale": "client-locale",
+							"X-Currency": "client-currency",
+						}),
+					}),
+				);
 			});
 
 			it("should use the request options if specified", async () => {
@@ -87,21 +114,145 @@ describe("request", () => {
 					sessionToken: "client-token",
 				});
 				await expect(
-					request(clientWithOptions, HTTP_METHOD.GET, "/products", {
+					request(clientWithOptions, HttpMethod.Get, "/products", {
 						sessionToken: "override-token",
 						currency: "override-currency",
 						locale: "override-locale",
 					}),
 				).resolves.not.toThrow();
-				expect(ofetch).toHaveBeenCalledWith(expect.any(String), {
-					method: HTTP_METHOD.GET,
-					headers: {
-						"X-Session": "override-token",
-						"X-Locale": "override-locale",
-						"X-Currency": "override-currency",
-					},
-				});
+				expect(ofetch).toHaveBeenCalledWith(
+					expect.any(String),
+					expect.objectContaining({
+						headers: expect.objectContaining({
+							"X-Session": "override-token",
+							"X-Locale": "override-locale",
+							"X-Currency": "override-currency",
+						}),
+					}),
+				);
 			});
 		});
+	});
+
+	it("should call ofetch with the correct method", async () => {
+		await request(client, HttpMethod.Get, "products");
+
+		expect(ofetch).toHaveBeenCalledWith(
+			expect.any(String),
+			expect.objectContaining({
+				method: HttpMethod.Get,
+			}),
+		);
+
+		await request(client, HttpMethod.Post, "products");
+
+		expect(ofetch).toHaveBeenCalledWith(
+			expect.any(String),
+			expect.objectContaining({
+				method: HttpMethod.Post,
+			}),
+		);
+	});
+
+	describe("request headers", () => {
+		it("should include the authorization header", async () => {
+			await request(client, HttpMethod.Get, "products");
+
+			expect(ofetch).toHaveBeenCalledWith(
+				expect.any(String),
+				expect.objectContaining({
+					headers: expect.objectContaining({
+						Authorization: "Basic dGVzdC1rZXk=",
+					}),
+				}),
+			);
+		});
+
+		it("should include the content-type and accept headers", async () => {
+			await request(client, HttpMethod.Get, "products");
+
+			expect(ofetch).toHaveBeenCalledWith(
+				expect.any(String),
+				expect.objectContaining({
+					headers: expect.objectContaining({
+						Accept: "application/json",
+						"Content-Type": "application/json",
+					}),
+				}),
+			);
+		});
+	});
+
+	it('should call ofetch with mode: "cors"', async () => {
+		await request(client, HttpMethod.Get, "products");
+
+		expect(ofetch).toHaveBeenCalledWith(
+			expect.any(String),
+			expect.objectContaining({
+				mode: "cors",
+			}),
+		);
+	});
+
+	it('should call ofetch with credentials: "include"', async () => {
+		await request(client, HttpMethod.Get, "products");
+
+		expect(ofetch).toHaveBeenCalledWith(
+			expect.any(String),
+			expect.objectContaining({
+				credentials: "include",
+			}),
+		);
+	});
+
+	it("should call ofetch with the correct body", async () => {
+		await request(client, HttpMethod.Post, "products", {
+			body: { test: true },
+		});
+
+		expect(ofetch).toHaveBeenCalledWith(
+			expect.any(String),
+			expect.objectContaining({
+				body: '{"test":true}',
+			}),
+		);
+	});
+
+	it("parses the response body as JSON", async () => {
+		vi.mocked(ofetch).mockImplementationOnce(() => {
+			return Promise.resolve({ test: true });
+		});
+
+		const response = await request(client, HttpMethod.Get, "products");
+		expect(response).toEqual({ test: true });
+	});
+
+	it("should not camelCase the response body", async () => {
+		vi.mocked(ofetch).mockImplementationOnce(() => {
+			return Promise.resolve({ test_field: true });
+		});
+
+		const response = await request(client, HttpMethod.Get, "products");
+		expect(response).toEqual({ test_field: true });
+	});
+
+	it("should camelCase the response body if the client is configured to do so", async () => {
+		vi.mocked(ofetch).mockImplementationOnce(() => {
+			return Promise.resolve({ test_field: true });
+		});
+
+		const clientWithCamelCase = init({
+			store: "test-store",
+			key: "test-key",
+			useCamelCase: true,
+		});
+
+		const response = await request(
+			clientWithCamelCase,
+			HttpMethod.Get,
+			"products",
+		);
+
+		expect(response).toEqual({ testField: true });
 	});
 });
