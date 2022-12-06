@@ -1,4 +1,4 @@
-import { SwellSessionOptions } from "types/session";
+import type { SwellSessionOptions } from "types/session";
 
 export interface SwellClientRequiredOptions {
 	/**
