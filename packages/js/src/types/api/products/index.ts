@@ -144,6 +144,7 @@ export interface OrderSchedule {
 
 export interface Price {
 	price: number;
+	account_group?: string;
 	quantity_min?: number | null;
 	quantity_max?: number | null;
 }
@@ -188,6 +189,7 @@ export interface CrossSell {
 	product_id: string;
 	discount_type: string;
 	discount_amount?: number | null;
+	discount_percent?: number | null;
 }
 
 export interface UpSell {
