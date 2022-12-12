@@ -1,5 +1,5 @@
 {
-	"name": "react",
+	"name": "@swell/react",
 	"version": "0.0.0",
 	"private": true,
 	"type": "module",
