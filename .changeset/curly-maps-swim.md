@@ -1,6 +1,6 @@
 ---
 "eslint-config-custom": minor
-"@swell/js": minor
+"@swell/js": patch
 "tsconfig": minor
 ---
 
