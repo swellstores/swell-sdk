@@ -2,7 +2,7 @@
 
 ## Description
 
-`@swell/js` is a JavaScript SDK that connects to Swell's Front-end API, providing helper methods for common data transforms and for the actions needed to create storefronts and purchase flows.
+@swell/js is a JavaScript SDK that connects to Swell's Front-end API, providing helper methods for common data transforms and for the actions needed to create storefronts and purchase flows.
 
 ## Getting Started
 
@@ -77,12 +77,10 @@ const product = getProduct(client, id, requestOptions);
 
 - `client` (SwellClient): The client returned from the `init` function.
 - `id` (string): Identifier for the product. Can be either the product's slug or the product's id.
-- `options`: (object, optional): Options for expanding and setting custom request options for the request.
-  - `expand` (object, optional): An array of the fields to expand. See [Expandable fields]() for a list of the possible expand options.
-  - `requestOptions` (object, optional): Overwrites the client options for the current request. Parameters:
-    - `locale` (string, optional): The requested product's locale.
-    - `currency` (string, optional): The requested product's currency.
-    - `sessionToken` (string, optional): The token from the session to be used.
+- `requestOptions` (object, optional): Overwrites the client options for the current request. Parameters:
+  - `locale` (string, optional): The requested product's locale.
+  - `currency` (string, optional): The requested product's currency.
+  - `sessionToken` (string, optional): The token from the session to be used.
 
 ### `getProductList`
 
@@ -114,127 +112,12 @@ const products = getProductList(client, options);
 
 - `client`: See SwellClient.
 - `options` (object, optional): Options for filtering and paginating the response.
+
   - `filters` (object, optional): Properties by which to narrow down the product list. Attributes to filter by:
     - `price` (number tuple, optional): Lower and upper bounds of the desired price range of the products to be retrieved. Example: `[10, 100]`
     - `category` (string, optional): The ID or slug of the category to filter by.
-    - `attributes` (object, optional): A key-value object of attributes to filter by. The key is the attribute's name, and the value is the attribute's value (`string | number`) or an array representing the different allowed values (`(string | number)[]`).
+    - [Custom Attribute] (string, optional): The keys are strings representing your store's custom product attributes. The values must match the format set in the store.
   - `requestOptions`: See requestOptions
   - `page` (number, optional): For pagination purposes. The products retrieved will start at the pointer specified by this field.
   - `limit` (number, optional): Max number of products to return per page. Defaults to 15, with a maximum of 100.
   - `sort` (string, optional): Field to sort responses by.
-
-### `getActiveVariant`
-
-Normalizes and returns the price data for a product based on the customer's selected options, alongside the rest of the matching variant's data, if found.
-
-#### Example
-
-```typescript
-const activeVariant = getActiveVariant(
-	// Product
-	{
-		// ...
-		id: "product-1",
-		purchaseOptions: {
-			standard: {
-				price: 30,
-			},
-			subscription: {
-				plans: [
-					{
-						id: "plan-1",
-						name: "Monthly",
-						price: 25,
-					},
-					{
-						id: "plan-2",
-						name: "Weekly",
-						price: 20,
-					},
-				],
-			},
-		},
-		options: [
-			{
-				id: "option-1",
-				name: "Size",
-				values: [
-					{
-						id: "option-value-1",
-						name: "S",
-					},
-					{
-						id: "option-value-2",
-						name: "M",
-					},
-				],
-			},
-		],
-		variants: {
-			results: [
-				{
-					id: "variant-1",
-					optionValueIds: ["option-value-1"],
-					price: 30,
-				},
-				{
-					id: "variant-2",
-					optionValueIds: ["option-value-2"],
-					price: 35,
-				},
-			],
-		},
-	},
-	// Selected product options
-	[
-		{
-			optionId: "option-1",
-			valueId: "option-value-2",
-		},
-	],
-	// Selected purchase option (subscription plan id)
-	"plan-2",
-);
-```
-
-In this case, activeVariant will look something like
-
-```JSON
-{
-  productId: "product-1",
-  id: "variant-2",
-  priceData: {
-    standard: {
-      price: 35,
-      // ...
-    },
-    subscription: {
-      id: "plan-2",
-      name: "Weekly",
-      price: 20,
-      // ...
-    },
-  },
-  // ...
-};
-```
-
-#### API
-
-```typescript
-const activeVariant = getActiveVariant(
-	product,
-	selectedOptions,
-	selectedPlanId,
-);
-```
-
-- `product`: See [Product](). Should be expanded to include the product's variants.
-- `selectedOptions`: (SelectedOption[] | null | undefined): The selected options for the product. Can be left empty if no options are selected.
-  - `optionId` (string): The ID of the option.
-  - `valueId` (string): The ID of the option's value.
-- `selectedPlan` (string | null | undefined): The ID of the selected plan. Can be left empty if no plan is selected.
-
-Returned object
-
-- activeVariant: The resolved price data for the product and selected options (under a `priceData` field) merged with the matching variant, if found.

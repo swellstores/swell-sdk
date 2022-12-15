@@ -1,35 +1,20 @@
 import request, { HttpMethod, RequestOptions } from "request";
 import type { SwellCamelCaseClient, SwellClient } from "client/types";
 import type { PaginatedResponse } from "types/api";
-import type {
-	Product,
-	Variant,
-	WithVariants,
-	ProductOption,
-	SubscriptionPlan,
-	StandardPurchaseOption,
-} from "types/api/products";
-import type { SwitchCamelCase, CamelCase } from "types/utils";
-import type {
-	ExpandableFields,
-	GetProductListOptions,
-	GetProductOptions,
-	GetProductResult,
-	SelectedProductOption,
-} from "./types";
+import type { SwellSessionOptions } from "types/session";
+import type { Product } from "types/api/products";
+import type { CamelCase } from "types/utils";
+import type { GetProductListOptions } from "./types";
 
 /**
  * Fetches a product using the passed-in identifier,
  * which can be either the product's ID or the product's slug.
  * @param client The client returned from the `init` function.
  * @param id Identifier for the product. Can be either the product's slug or the product's id.
- * @param options Options for expanding and setting custom request options for the request.
+ * @param requestOptions Overwrites the client options for the current request.
  */
-export async function getProduct<
-	C extends SwellClient | SwellCamelCaseClient,
-	E extends ExpandableFields = [],
->(
-	client: C,
+export async function getProduct<T extends SwellClient | SwellCamelCaseClient>(
+	client: T,
 	id: string,
 	options?: GetProductOptions<E>,
 ): Promise<SwitchCamelCase<C, GetProductResult<E>>> {
@@ -52,85 +37,17 @@ export async function getProduct<
  * @param client The client returned from the `init` function.
  * @param options Options for filtering and paginating the response.
  */
-export async function getProductList<
-	C extends SwellClient | SwellCamelCaseClient,
-	F extends string = string,
->(
-	client: C,
+export async function getProductList<F extends string = string>(
+	client: SwellClient,
 	options: GetProductListOptions<F> = {},
-): Promise<SwitchCamelCase<C, PaginatedResponse<Product>>> {
-	const { category, price, attributes } = options.filters ?? {};
-
-	const filters: Record<string, unknown> = { ...attributes };
-
-	if (category) filters.category = category;
-	if (price) filters.price = price;
-
-	return request(client, HttpMethod.Get, "products", {
-		searchParams: {
-			$filters: filters,
-			limit: options.limit,
-			page: options.page,
-			sort: options.sort,
-		},
-		...options.requestOptions,
-	});
-}
-
-// TODO: move types out
-
-type VariantPriceFields =
-	| "price"
-	| "prices"
-	| "sale"
-	| "salePrice"
-	| "origPrice"
-	| "purchaseOptions";
-
-interface FallbackVariant {
-	productId?: string;
-	priceData?: {
-		standard?: StandardPurchaseOption;
-		subscription?: SubscriptionPlan;
-	};
-}
-
-interface WithMatchingVariant
-	extends FallbackVariant,
-		Omit<Variant, VariantPriceFields> {
-	variantId?: string | null;
-}
-
-export type ActiveVariant = FallbackVariant | WithMatchingVariant;
-
-/**
- * Normalizes and returns the price data for a product based on the user's selected options,
- * alongside the rest of the matching variant's data, if found.
- * @param product The product to get the active variant from.
- * @param selectedOptions The options selected by the user, if any.
- * @param selectedPlanId The ID of the selected subscription plan, if any.
- * @returns The resolved price data for the product merged with the matching variant, if found.
- */
-export function getActiveVariant(
-	product?: CamelCase<WithVariants<Product>>,
-	selectedOptions?: SelectedProductOption[],
-	selectedPlanId?: string | null,
-): ActiveVariant | undefined {
-	if (!product) return;
-
-	const variants = product?.variants?.results;
-
-	const baseStandardData = product?.purchaseOptions?.standard;
-	const baseSubscriptionData = product?.purchaseOptions?.subscription;
-
-	const baseVariant = {
-		productId: product?.id,
-		priceData: {
-			...(baseStandardData && { standard: baseStandardData }),
-			...(baseSubscriptionData &&
-				selectedPlanId && {
-					subscription: getPlan(baseSubscriptionData?.plans, selectedPlanId),
-				}),
+) {
+	return request<PaginatedResponse<Product>>(
+		client,
+		HttpMethod.Get,
+		"products",
+		{
+			searchParams: options,
+			...options.requestOptions,
 		},
 	};
 

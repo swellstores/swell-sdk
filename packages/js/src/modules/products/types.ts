@@ -1,10 +1,4 @@
-import type {
-	Product,
-	WithCategories,
-	WithUpSellProducts,
-	WithVariants,
-} from "types/api/products";
-import type { SwellAttributes, SwellPaginationOptions } from "types/query";
+import type { SwellPaginationOptions } from "types/pagination";
 import type { SwellSessionOptions } from "types/session";
 
 export type Option = {
@@ -117,7 +111,18 @@ export type GetProductOptions<E extends ExpandableFields> = {
 // 	? GetProductOptions<T>
 // 	: never;
 
-export type GetProductResult<E extends ExpandableFields = []> = Product &
-	Expand<"variants", E, WithVariants<Product>> &
-	Expand<"categories", E, WithCategories<Product>> &
-	Expand<"up_sells.product", E, WithUpSellProducts<Product>>;
+export type PurchaseOption =
+	| InputSubscriptionPurchaseOption
+	| InputStandardPurchaseOption;
+
+export type ProductFilters<K extends string = string> = {
+	price?: [number, number];
+	category?: string | string[];
+} & {
+	[key in K]?: string | string[];
+};
+
+export type GetProductListOptions<F extends string = string> = {
+	filters?: ProductFilters<F>;
+	requestOptions?: SwellSessionOptions;
+} & SwellPaginationOptions;
