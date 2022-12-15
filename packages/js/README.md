@@ -1,12 +1,12 @@
-# Swell-JS
+# @swell/js
 
 ## Description
 
-Swell-js is a JavaScript SDK that connects to Swell's Front-end API, providing helper methods for common data transforms and for the actions needed to create storefronts and purchase flows.
+@swell/js is a JavaScript SDK that connects to Swell's Front-end API, providing helper methods for common data transforms and for the actions needed to create storefronts and purchase flows.
 
 ## Getting Started
 
-The first step in setting up swell-js for usage is to initialize your client.
+The first step in setting up @swell/js for usage is to initialize your client.
 
 ```typescript
 const options: SwellClientInitOptions = {
@@ -52,4 +52,72 @@ const client = init(options);
 
 - sessionToken (optional): string
 
-  The swell-js client already managed user sessions through cookies, but this property can be set to override the session used to fetch data.
+  The @swell/js client already managed user sessions through cookies, but this property can be set to override the session used to fetch data.
+
+## Methods
+
+### `getProduct`
+
+Fetches a product using the passed-in identifier, which can be either the product's ID or the product's slug.
+
+#### Example
+
+```typescript
+const product = getProduct(client, "my-product", {
+	locale: "en",
+	currency: "USD",
+});
+```
+
+#### API
+
+```typescript
+const product = getProduct(client, id, requestOptions);
+```
+
+- `client` (SwellClient): The client returned from the `init` function.
+- `id` (string): Identifier for the product. Can be either the product's slug or the product's id.
+- `requestOptions` (object, optional): Overwrites the client options for the current request. Parameters:
+  - `locale` (string, optional): The requested product's locale.
+  - `currency` (string, optional): The requested product's currency.
+  - `sessionToken` (string, optional): The token from the session to be used.
+
+### `getProductList`
+
+Returns a paginated list of the store's products, which can optionally be filtered by the passed-in attributes.
+
+#### Example
+
+```typescript
+const products = getProductList(client, {
+  filters: {
+    category: 'books'
+    search: 'ring',
+    author: 'J.R.R. Tolkien'
+  },
+})
+```
+
+In this example, the `getProductList` function will attempt to retrieve a list of products that satisfies the following conditions (if any):
+
+- The products must be inside of a category 'books'.
+- Either the product title, the product slug or the product SKU must contain the term 'ring'.
+- The product must have an 'author' attribute with the value of 'J.R.R. Tolkien'. Author is a custom product attribute specific to this store.
+
+#### API
+
+```typescript
+const products = getProductList(client, options);
+```
+
+- `client`: See SwellClient.
+- `options` (object, optional): Options for filtering and paginating the response.
+
+  - `filters` (object, optional): Properties by which to narrow down the product list. Attributes to filter by:
+    - `price` (number tuple, optional): Lower and upper bounds of the desired price range of the products to be retrieved. Example: `[10, 100]`
+    - `category` (string, optional): The ID or slug of the category to filter by.
+    - [Custom Attribute] (string, optional): The keys are strings representing your store's custom product attributes. The values must match the format set in the store.
+  - `requestOptions`: See requestOptions
+  - `page` (number, optional): For pagination purposes. The products retrieved will start at the pointer specified by this field.
+  - `limit` (number, optional): Max number of products to return per page. Defaults to 15, with a maximum of 100.
+  - `sort` (string, optional): Field to sort responses by.

@@ -4,7 +4,15 @@ import type { PaginatedResponse } from "types/api";
 import type { SwellSessionOptions } from "types/session";
 import type { Product } from "types/api/products";
 import type { CamelCase } from "types/utils";
+import type { GetProductListOptions } from "./types";
 
+/**
+ * Fetches a product using the passed-in identifier,
+ * which can be either the product's ID or the product's slug.
+ * @param client The client returned from the `init` function.
+ * @param id Identifier for the product. Can be either the product's slug or the product's id.
+ * @param requestOptions Overwrites the client options for the current request.
+ */
 export async function getProduct<T extends SwellClient | SwellCamelCaseClient>(
 	client: T,
 	id: string,
@@ -13,24 +21,15 @@ export async function getProduct<T extends SwellClient | SwellCamelCaseClient>(
 	return request(client, HttpMethod.Get, `products/${id}`, requestOptions);
 }
 
-type ProductFilters<K extends string = string> = {
-	filter?: [number, number];
-	category?: string[];
-} & {
-	[key in K]?: string[];
-};
-
-export type GetProductsOptions<F extends string = string> = {
-	page?: number;
-	limit?: number;
-	sort?: string;
-	filters?: ProductFilters<F>;
-	requestOptions?: SwellSessionOptions;
-};
-
-export async function getProducts<F extends string = string>(
+/**
+ * Returns a paginated list of the store's products,
+ * which can optionally be filtered by the passed-in attributes.
+ * @param client The client returned from the `init` function.
+ * @param options Options for filtering and paginating the response.
+ */
+export async function getProductList<F extends string = string>(
 	client: SwellClient,
-	options: GetProductsOptions<F>,
+	options: GetProductListOptions<F> = {},
 ) {
 	return request<PaginatedResponse<Product>>(
 		client,
