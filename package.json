@@ -12,7 +12,8 @@
 		"dev": "turbo run dev --parallel",
 		"lint": "turbo run lint --parallel",
 		"test": "turbo run test --parallel",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\""
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"publish-packages": "turbo run build lint test && changeset version && changeset publish"
 	},
 	"devDependencies": {
 		"eslint-config-custom": "workspace:*",
@@ -22,6 +23,8 @@
 	"engines": {
 		"node": ">=16.0.0"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"@changesets/cli": "^2.25.2"
+	},
 	"packageManager": "pnpm@7.16.0"
 }
