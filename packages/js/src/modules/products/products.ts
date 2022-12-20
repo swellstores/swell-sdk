@@ -27,17 +27,31 @@ export async function getProduct<T extends SwellClient | SwellCamelCaseClient>(
  * @param client The client returned from the `init` function.
  * @param options Options for filtering and paginating the response.
  */
-export async function getProductList<F extends string = string>(
-	client: SwellClient,
+export async function getProductList<
+	T extends SwellClient | SwellCamelCaseClient,
+	F extends string = string,
+>(
+	client: T,
 	options: GetProductListOptions<F> = {},
-) {
-	return request<PaginatedResponse<Product>>(
-		client,
-		HttpMethod.Get,
-		"products",
-		{
-			searchParams: options,
-			...options.requestOptions,
+): Promise<
+	T extends SwellCamelCaseClient
+		? CamelCase<PaginatedResponse<Product>>
+		: PaginatedResponse<Product>
+> {
+	const { category, price, attributes } = options.filters ?? {};
+
+	const filters: Record<string, unknown> = { ...attributes };
+
+	if (category) filters.category = category;
+	if (price) filters.price = price;
+
+	return request(client, HttpMethod.Get, "products", {
+		searchParams: {
+			$filters: filters,
+			limit: options.limit,
+			page: options.page,
+			sort: options.sort,
 		},
-	);
+		...options.requestOptions,
+	});
 }

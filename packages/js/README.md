@@ -116,7 +116,7 @@ const products = getProductList(client, options);
   - `filters` (object, optional): Properties by which to narrow down the product list. Attributes to filter by:
     - `price` (number tuple, optional): Lower and upper bounds of the desired price range of the products to be retrieved. Example: `[10, 100]`
     - `category` (string, optional): The ID or slug of the category to filter by.
-    - [Custom Attribute] (string, optional): The keys are strings representing your store's custom product attributes. The values must match the format set in the store.
+    - `attributes` (object, optional): A key-value object of attributes to filter by. The key is the attribute's name, and the value is the attribute's value (`string | number`) or an array representing the different allowed values (`(string | number)[]`).
   - `requestOptions`: See requestOptions
   - `page` (number, optional): For pagination purposes. The products retrieved will start at the pointer specified by this field.
   - `limit` (number, optional): Max number of products to return per page. Defaults to 15, with a maximum of 100.
