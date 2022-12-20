@@ -1,4 +1,4 @@
-import type { SwellPaginationOptions } from "types/pagination";
+import type { SwellAttributes, SwellPaginationOptions } from "types/query";
 import type { SwellSessionOptions } from "types/session";
 
 export type Option = {
@@ -115,11 +115,10 @@ export type PurchaseOption =
 	| InputSubscriptionPurchaseOption
 	| InputStandardPurchaseOption;
 
-export type ProductFilters<K extends string = string> = {
+export type ProductFilters<F extends string> = {
 	price?: [number, number];
 	category?: string | string[];
-} & {
-	[key in K]?: string | string[];
+	attributes?: SwellAttributes<F>;
 };
 
 export type GetProductListOptions<F extends string = string> = {

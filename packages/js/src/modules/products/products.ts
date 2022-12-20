@@ -37,115 +37,33 @@ export async function getProduct<T extends SwellClient | SwellCamelCaseClient>(
  * @param client The client returned from the `init` function.
  * @param options Options for filtering and paginating the response.
  */
-export async function getProductList<F extends string = string>(
-	client: SwellClient,
+export async function getProductList<
+	T extends SwellClient | SwellCamelCaseClient,
+	F extends string = string,
+>(
+	client: T,
 	options: GetProductListOptions<F> = {},
-) {
-	return request<PaginatedResponse<Product>>(
-		client,
-		HttpMethod.Get,
-		"products",
-		{
-			searchParams: options,
-			...options.requestOptions,
+): Promise<
+	T extends SwellCamelCaseClient
+		? CamelCase<PaginatedResponse<Product>>
+		: PaginatedResponse<Product>
+> {
+	const { category, price, attributes } = options.filters ?? {};
+
+	const filters: Record<string, unknown> = { ...attributes };
+
+	if (category) filters.category = category;
+	if (price) filters.price = price;
+
+	return request(client, HttpMethod.Get, "products", {
+		searchParams: {
+			$filters: filters,
+			limit: options.limit,
+			page: options.page,
+			sort: options.sort,
 		},
-	};
-
-	if (!variants?.length) {
-		return baseVariant;
-	}
-
-	const matchingVariant = variants?.find((variant) =>
-		variant.optionValueIds?.every((valueId: string) =>
-			selectedOptions?.some((option) => option?.valueId === valueId),
-		),
-	);
-
-	if (!matchingVariant) {
-		return baseVariant;
-	}
-
-	const priceData = {
-		...(baseStandardData && {
-			standard: getVariantStandardPrice(product, matchingVariant),
-		}),
-		...(baseSubscriptionData &&
-			selectedPlanId && {
-				subscription: getVariantSubscriptionPrice(
-					product,
-					matchingVariant,
-					selectedPlanId,
-				),
-			}),
-	};
-
-	return {
-		...baseVariant,
-		...matchingVariant,
-		variantId: matchingVariant.id,
-		priceData,
-	};
-}
-
-function getVariantStandardPrice(
-	product: CamelCase<WithVariants<Product>>,
-	matchingVariant?: CamelCase<Variant>,
-): CamelCase<StandardPurchaseOption> | undefined {
-	const productPurchaseOption = product?.purchaseOptions?.standard;
-	// If the product doesn't have a standard purchase option, neither should the variant
-	if (!productPurchaseOption) {
-		return;
-	}
-	// If there is no matching variant, use the product's standard purchase option
-	if (!matchingVariant) {
-		return productPurchaseOption;
-	}
-
-	const variantPurchaseOption = matchingVariant?.purchaseOptions?.standard;
-	// If the variant has a standard purchase option, use it
-	if (variantPurchaseOption) {
-		return variantPurchaseOption;
-	}
-
-	// If it doesn't, but still has price data, build a purchase option object from it
-	if (matchingVariant?.price) {
-		const { price, prices, sale, salePrice, origPrice } = matchingVariant;
-		return {
-			...(prices && { prices }),
-			...(price && { price }),
-			...(sale && { sale }),
-			...(salePrice && { salePrice }),
-			...(origPrice && { origPrice }),
-		};
-	}
-
-	// If it doesn't have price data, use the product's standard purchase option as a fallback
-	return productPurchaseOption;
-}
-
-function getVariantSubscriptionPrice(
-	product: CamelCase<WithVariants<Product>>,
-	matchingVariant?: CamelCase<Variant>,
-	selectedPlanId?: string,
-): CamelCase<SubscriptionPlan> | undefined {
-	const productPurchaseOption = product?.purchaseOptions?.subscription;
-	// If the product doesn't have a subscription purchase option, neither should the variant
-	if (!productPurchaseOption || !selectedPlanId) {
-		return;
-	}
-
-	const plans = productPurchaseOption?.plans;
-	const selectedPlan = getPlan(plans, selectedPlanId);
-
-	if (!selectedPlan) {
-		return;
-	}
-
-	return addOptionPricesToPlan(
-		selectedPlan,
-		product?.options,
-		matchingVariant?.optionValueIds,
-	);
+		...options.requestOptions,
+	});
 }
 
 function addOptionPricesToPlan(
