@@ -1,5 +1,12 @@
+import type {
+	Product,
+	WithCategories,
+	WithUpSellProducts,
+	WithVariants,
+} from "types/api/products";
 import type { SwellAttributes, SwellPaginationOptions } from "types/query";
 import type { SwellSessionOptions } from "types/session";
+import type { Expand, ExpandableField } from "types/utils";
 
 export type Option = {
 	id: string;
@@ -89,39 +96,16 @@ export type SelectedProductOption = {
 	valueId: string;
 };
 
-type StripExpandedAmount<T extends ExpandableField<string>> =
-	T extends `${infer K}:${number}` ? K : T;
-
-export type ExpandableField<T extends string> = T | `${T}:${number}`;
-
-export type Expand<
-	K extends string,
-	E extends any[],
-	T extends object,
-> = K extends StripExpandedAmount<E[number]> ? T : unknown;
-
-export type ExpandableFields = Array<ExpandableField<GetProductExpandOptions>>;
-
-export type GetProductOptions<E extends ExpandableFields> = {
+export type GetProductOptions<
+	E extends Array<ExpandableField<GetProductExpandOptions>>,
+> = {
 	expand?: E;
 	requestOptions?: SwellSessionOptions;
 };
 
-// export type GetProductOptions2<T> = T extends ExpandableFields
-// 	? GetProductOptions<T>
-// 	: never;
-
-export type PurchaseOption =
-	| InputSubscriptionPurchaseOption
-	| InputStandardPurchaseOption;
-
-export type ProductFilters<F extends string> = {
-	price?: [number, number];
-	category?: string | string[];
-	attributes?: SwellAttributes<F>;
-};
-
-export type GetProductListOptions<F extends string = string> = {
-	filters?: ProductFilters<F>;
-	requestOptions?: SwellSessionOptions;
-} & SwellPaginationOptions;
+export type GetProductResult<
+	E extends Array<ExpandableField<GetProductExpandOptions>> = [],
+> = Product &
+	Expand<"variants", E, WithVariants<Product>> &
+	Expand<"categories", E, WithCategories<Product>> &
+	Expand<"up_sells.product", E, WithUpSellProducts<Product>>;
