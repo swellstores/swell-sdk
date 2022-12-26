@@ -19,4 +19,7 @@ export default defineConfig({
 		},
 	},
 	plugins: [tsConfigPaths(), dts()],
+	test: {
+		cache: false,
+	},
 });

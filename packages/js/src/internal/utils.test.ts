@@ -5,6 +5,12 @@ import {
 	objectToCamel,
 } from "./utils";
 import { describe, it, expect, vi } from "vitest";
+import {
+	baseProduct,
+	standardPriceOnlyProduct,
+	subscriptionPriceOnlyProduct,
+	productVariants,
+} from "modules/products/products.test";
 
 describe("utils", () => {
 	describe("removeTrailingSlash", () => {
@@ -74,6 +80,17 @@ describe("utils", () => {
 					snakeCase: { snakeCase: [{ snakeCase: { snakeCase: "test" } }] },
 				},
 			});
+		});
+
+		it("should not impact already camel cased keys and values", () => {
+			expect(baseProduct).toEqual(objectToCamel(baseProduct));
+			expect(standardPriceOnlyProduct).toEqual(
+				objectToCamel(standardPriceOnlyProduct),
+			);
+			expect(subscriptionPriceOnlyProduct).toEqual(
+				objectToCamel(subscriptionPriceOnlyProduct),
+			);
+			expect(productVariants).toEqual(objectToCamel(productVariants));
 		});
 	});
 });
