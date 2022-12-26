@@ -6,17 +6,30 @@
 
 ## Getting Started
 
-The only setup needed for `@swell/react` is to wrap your components within a Swell provider.
+The first step in setting up `@swell/react` is to initialize the Swell client.
 
-```tsx
-import { SwellContextProvider } from "@swell/react";
+```typescript
+import { init } from "@swell/js";
 
-<SwellContextProvider storeKey={storeKey} store={store}>
-	<App />
-</SwellContextProvider>;
+const options: SwellClientInitOptions = {
+	store: "test-store",
+	key: "test-key",
+};
+
+const client = init(options);
 ```
 
-The hooks described below will now connect automatically to your store.
+The client can then be injected into the application's component tree, through the use of React Context:
+
+```tsx
+import { SwellProvider } from "@swell/react";
+
+<SwellProvider client={client}>
+	<App />
+</SwellProvider>;
+```
+
+See the [`@swell/js` docs](https://github.com/swellstores/swell-sdk/tree/feat/products-module/packages/js) for more information on the client's API and usage.
 
 ## Hooks
 
@@ -41,7 +54,7 @@ const { product, activeVariant, loading, error } = useProduct(id, {
 });
 ```
 
-The hook will listen to changes in the id and trigger a refetch, updating the `loading` boolean and the other returned values if necessary.
+The hook will listen to changes int he id and trigger a refetch, updating the `loading` boolean and the other returned values if necessary.
 
 Alternatively you can pass an existing product as the first argument. This is useful when the product is fetched ahead of time (for example server-side) but you'd still like to make use of the activeVariant helpers.
 
@@ -102,7 +115,7 @@ Changes to the filters will trigger a refetch and update the returned values acc
 #### API
 
 ```typescript
-const { products, loading, error } = getProductList(options);
+const products = getProductList(client, options);
 ```
 
 Arguments:
@@ -111,6 +124,6 @@ Arguments:
 
 Returns:
 
-- `products`: Paginated list of products
+- `products`: List of products
 - `loading` (boolean)
 - `error` (string | null)
