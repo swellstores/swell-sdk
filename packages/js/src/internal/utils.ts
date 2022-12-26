@@ -47,7 +47,12 @@ export function base64(string: string) {
 
 export function objectToCamel<T extends object>(object: T): CamelCase<T> {
 	if (Array.isArray(object)) {
-		const result = object.map((item) => objectToCamel(item));
+		const result = object.map((item) => {
+			if (item !== null && typeof item === "object") {
+				return objectToCamel(item);
+			}
+			return item;
+		});
 
 		return result as CamelCase<T>;
 	}
