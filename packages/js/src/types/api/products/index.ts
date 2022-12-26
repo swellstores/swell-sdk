@@ -1,55 +1,58 @@
+import type { BaseModel } from "..";
+
 export * from "./expanded";
 
-export interface Product {
-	id: string;
-	attributes: Attributes;
-	content?: Content;
-	currency: string;
-	images?: Image[] | null;
-	name: string;
-	options?: ProductOption[];
-	orig_price?: number;
-	price: number;
-	sale?: boolean | null;
-	sku?: string | null;
-	slug: string;
-	stock_level?: number | null;
-	stock_status?: string | null;
-	stock_tracking: boolean;
-	description?: string | null;
+export interface Product extends BaseModel {
+	active?: boolean | null;
+	attributes?: Attributes | null;
+	bundle_items?: BundleItem[] | null;
 	bundle?: boolean | null;
-	meta_description?: string | null;
-	meta_title?: string | null;
-	purchase_options?: PurchaseOptions | null;
-	tags?: string[];
-	prices?: Price[];
-	stock_purchasable?: boolean | null;
-	type?: ProductType;
-	active?: boolean;
-	variable?: boolean;
-	bundle_items?: BundleItem[];
-	up_sells?: UpSell[];
-	cross_sells?: CrossSell[];
-	virtual?: boolean;
+	categories?: unknown[] | null;
+	category_id?: string | null;
+	category_index?: CategoryIndex | null;
+	category?: unknown | null;
+	code?: string | null;
+	content?: Content | null;
+	cost?: number | null;
+	cross_sells?: CrossSell[] | null;
+	currency?: string | null;
+	customizable?: boolean | null;
 	delivery?: DeliveryType | null;
-	date_created?: string;
-	date_updated?: string;
+	description?: string | null;
+	discontinued?: boolean | null;
+	images?: Image[] | null;
+	meta_description?: string | null;
+	meta_keywords?: string | null;
+	meta_title?: string | null;
+	name?: string | null;
+	options?: ProductOption[] | null;
+	orig_price?: number | null;
+	price?: number | null;
+	prices?: Price[] | null;
+	purchase_options?: PurchaseOptions | null;
+	quantity_inc?: number | null;
+	quantity_min?: number | null;
+	related_product_ids?: string[] | null;
 	sale_price?: number | null;
-	shipment_delivery?: boolean;
+	sale?: boolean | null;
+	shipment_delivery?: boolean | null;
+	shipment_dimensions?: ShipmentDimensions | null;
+	shipment_location?: string | null;
+	sku?: string | null;
+	slug?: string | null;
+	stock_level?: number | null;
+	stock_purchasable?: boolean | null;
+	stock_status?: string | null;
+	stock_tracking?: boolean | null;
+	tags?: string[] | null;
+	type?: ProductType | null;
+	up_sells?: UpSell[] | null;
+	variable?: boolean | null;
+	virtual?: boolean | null;
 }
 
-export enum DeliveryType {
-	Shipment = "shipment",
-	Subscription = "subscription",
-	GiftCard = "giftcard",
-}
-
-export enum ProductType {
-	Standard = "standard",
-	Digital = "digital",
-	Bundle = "bundle",
-	GiftCard = "giftcard",
-}
+export type DeliveryType = "shipment" | "subscription" | "giftcard";
+export type ProductType = "standard" | "digital" | "bundle" | "giftcard";
 
 type Content = Record<string, unknown>;
 type Attributes = Record<string, unknown>;
@@ -64,152 +67,159 @@ export interface Category {
 }
 
 export interface Variant {
-	id: string;
-	parent_id: string;
-	name: string;
-	active: boolean;
-	option_value_ids: string[];
-	currency: string;
-	date_created?: string;
-	date_updated?: string;
-	sku?: string | null;
-	attributes?: Attributes;
-	price?: number;
-	prices?: Price[];
-	purchase_options?: PurchaseOptions;
-	sale?: boolean;
+	active?: boolean | null;
+	attributes?: Attributes | null;
+	currency?: string | null;
+	date_created?: string | null;
+	date_updated?: string | null;
+	id?: string | null;
+	name?: string | null;
+	option_value_ids?: string[] | null;
+	parent_id?: string | null;
+	price?: number | null;
+	prices?: Price[] | null;
+	purchase_options?: PurchaseOptions | null;
 	sale_price?: number | null;
+	orig_price?: number | null;
+	sale?: boolean | null;
+	sku?: string | null;
 }
 
 export interface BundleItem {
-	id: string;
-	product_id: string;
+	bundle_items?: BundleItem[] | null;
+	delivery?: string | null;
+	id?: string | null;
+	options?: ProductOption[] | null;
+	orig_price?: number | null;
+	price?: number | null;
+	product_id?: string | null;
+	product_name?: string | null;
+	product?: Product | null;
+	quantity_total?: number | null;
+	quantity?: number | null;
+	shipment_weight?: number | null;
+	stock_tracking?: boolean | null;
+	variable?: string | null;
 	variant_id?: string | null;
-	options?: ProductOption[];
-	quantity: number;
-	quantity_total?: number;
-	variable?: string;
-	price?: number;
-	orig_price?: number;
-	delivery?: string;
-	shipment_weight?: number;
-	product_name?: string;
-	stock_tracking?: boolean;
-	bundle_items?: BundleItem[];
-	product?: Product;
 	variant?: Variant | null;
 }
 
 export interface PurchaseOptions {
-	subscription?: SubscriptionPurchaseOption;
-	standard?: StandardPurchaseOption;
+	standard?: StandardPurchaseOption | null;
+	subscription?: SubscriptionPurchaseOption | null;
 }
 
 export interface StandardPurchaseOption {
-	active?: boolean;
-	price: number;
-	sale: boolean;
+	active?: boolean | null;
+	price?: number | null;
+	prices?: Price[] | null;
 	sale_price?: number | null;
-	prices?: Price[];
+	sale?: boolean | null;
+	orig_price?: number | null;
 }
 
 export interface SubscriptionPurchaseOption {
-	active?: boolean;
-	plans: SubscriptionPlan[];
+	active?: boolean | null;
+	plans?: SubscriptionPlan[] | null;
 }
 
 export interface SubscriptionPlan {
-	id: string;
-	name: string;
-	active?: boolean;
-	description: string | null;
-	price: number;
-	prices?: Price[];
-	billing_schedule: BillingSchedule;
-	order_schedule?: OrderSchedule;
+	active?: boolean | null;
+	billing_schedule?: BillingSchedule | null;
+	description?: string | null;
+	id?: string | null;
+	name?: string | null;
+	order_schedule?: OrderSchedule | null;
+	price?: number | null;
 }
 
 export interface BillingSchedule {
-	interval: string;
-	interval_count: number;
-	limit: number | null;
-	trial_days: number;
+	interval_count?: number | null;
+	interval?: string | null;
+	limit?: number | null;
+	trial_days?: number | null;
 }
 
 export interface OrderSchedule {
-	interval: string;
-	interval_count: number;
-	limit: number | null;
+	interval_count?: number | null;
+	interval?: string | null;
+	limit?: number | null;
 }
 
 export interface Price {
-	price: number;
-	account_group?: string;
-	quantity_min?: number | null;
+	account_group?: string | null;
+	price?: number | null;
 	quantity_max?: number | null;
+	quantity_min?: number | null;
 }
 
-export enum OptionInputType {
-	Select = "select",
-	ShortText = "short_text",
-	LongText = "long_text",
-	Toggle = "toggle",
-}
+export type OptionInputType = "long_text" | "select" | "short_text" | "toggle";
 
 export type ProductOption = {
-	id: string;
-	name: string;
-	variant: boolean;
-	value?: string;
-	value_id?: string;
-	values?: Array<ProductOptionValue | ExtendedOptionValue>;
-	price?: number;
-	input_type?: OptionInputType;
-	required?: boolean;
-	active?: boolean;
-	attribute_id?: string;
+	active?: boolean | null;
+	attribute_id?: string | null;
 	description?: string | null;
+	id?: string | null;
 	input_hint?: string | null;
+	input_type?: OptionInputType | null;
+	name?: string | null;
 	parent_id?: string | null;
+	price?: number | null;
+	required?: boolean | null;
+	value_id?: string | null;
+	value?: string | null;
+	values?: Array<ProductOptionValue> | null;
+	variant?: boolean | null;
 };
 
 export interface ProductOptionValue {
-	id: string | null; //weird but happened
-	name: string;
-}
-
-export interface ExtendedOptionValue extends ProductOptionValue {
-	price: number;
-	description: null;
+	id?: string | null;
+	name?: string | null;
+	description?: string | null;
+	price?: number | null;
 	shipment_weight?: number | null;
 }
 
 export interface CrossSell {
-	id: string;
-	product_id: string;
-	discount_type: string;
 	discount_amount?: number | null;
 	discount_percent?: number | null;
+	discount_type?: string | null;
+	id?: string | null;
+	product_id?: string | null;
 }
 
 export interface UpSell {
-	id: string;
-	product_id: string;
+	id?: string | null;
+	product_id?: string | null;
 }
 
 export interface Image {
-	file: File;
-	id: string;
+	file?: File | null;
+	id?: string | null;
 }
 
 export interface File {
-	id?: string | null;
+	content_type?: string | null;
 	date_uploaded?: string | null;
+	filename?: string | null;
+	height?: number | null;
+	id?: string | null;
 	length?: number | null;
 	md5?: string | null;
-	filename?: string | null;
-	content_type?: string | null;
-	url: string;
+	url?: string | null;
 	width?: number | null;
+}
+
+export type ShipmentDimensionsUnit = "in" | "cm";
+
+export interface ShipmentDimensions {
 	height?: number | null;
+	length?: number | null;
+	unit?: ShipmentDimensionsUnit | null;
+	width?: number | null;
+}
+
+export interface CategoryIndex {
+	id?: string | null;
+	sort?: object | null;
 }
