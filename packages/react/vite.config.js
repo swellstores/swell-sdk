@@ -1,22 +1,16 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
-import tsConfigPaths from "vite-tsconfig-paths";
-import dts from "vite-plugin-dts";
-import pkg from "./package.json"
+import react from "@vitejs/plugin-react";
 
-const deps = Object.keys({...pkg.dependencies, ...pkg.peerDependencies});
-
+// https://vitejs.dev/config/
 export default defineConfig({
+	plugins: [react()],
 	build: {
 		lib: {
 			// eslint-disable-next-line no-undef
 			entry: resolve(__dirname, "src/index.ts"),
 			name: "@swell/react",
-			fileName: "index",
-		},
-		rollupOptions: {
-			external: deps
+			fileName: "swell-react",
 		},
 	},
-	plugins: [tsConfigPaths(), dts()],
 });
