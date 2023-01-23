@@ -2,7 +2,7 @@
 
 ## Description
 
-@swell/js is a JavaScript SDK that connects to Swell's Front-end API, providing helper methods for common data transforms and for the actions needed to create storefronts and purchase flows.
+`@swell/js` is a JavaScript SDK that connects to Swell's Front-end API, providing helper methods for common data transforms and for the actions needed to create storefronts and purchase flows.
 
 ## Getting Started
 
@@ -131,92 +131,92 @@ Normalizes and returns the price data for a product based on the customer's sele
 
 ```typescript
 const activeVariant = getActiveVariant(
-  // Product
-  {
-    // ...
-    purchase_options: {
-      standard: {
-        price: 30
-      }
-      subscriptions: {
-        plans: [
-        {
-          id: 'plan-1',
-          name: "Monthly",
-          price: 25
-        },
-        {
-          id: 'plan-2',
-          name: "Weekly",
-          price: 20
-        }
-        ]
-      }
-  },
-  options: [
-    id: "option-1",
-    name: "Size"
-    values: [
-      {
-        id: "option-value-1",
-        name: "S"
-      }, {
-        id: "option-value-2",
-        name: "M"
-      }
-    ]
-  ],
-    variants: [
-      results: [
-        {
-          id: "variant-1",
-          option_value_ids: [
-            "option-value-1
-          ],
-          price: 30
-        },
-        {
-          id: "variant-2",
-          option_value_ids: [
-            "option-value-2
-          ],
-          price: 35
-        }
-      ]
-    ]
-  },
-  // Selected product options
-  [
-    {
-      id: 'option-1',
-      value: 'option-value-2'
-    }
-  ],
-  // Selected purchase option (subscription plan id)
-  'plan-2'
-)
+	// Product
+	{
+		// ...
+		id: "product-1",
+		purchaseOptions: {
+			standard: {
+				price: 30,
+			},
+			subscription: {
+				plans: [
+					{
+						id: "plan-1",
+						name: "Monthly",
+						price: 25,
+					},
+					{
+						id: "plan-2",
+						name: "Weekly",
+						price: 20,
+					},
+				],
+			},
+		},
+		options: [
+			{
+				id: "option-1",
+				name: "Size",
+				values: [
+					{
+						id: "option-value-1",
+						name: "S",
+					},
+					{
+						id: "option-value-2",
+						name: "M",
+					},
+				],
+			},
+		],
+		variants: {
+			results: [
+				{
+					id: "variant-1",
+					optionValueIds: ["option-value-1"],
+					price: 30,
+				},
+				{
+					id: "variant-2",
+					optionValueIds: ["option-value-2"],
+					price: 35,
+				},
+			],
+		},
+	},
+	// Selected product options
+	[
+		{
+			optionId: "option-1",
+			valueId: "option-value-2",
+		},
+	],
+	// Selected purchase option (subscription plan id)
+	"plan-2",
+);
 ```
 
 In this case, activeVariant will look something like
 
-```typescript
+```JSON
 {
-  purchaseData: {
+  productId: "product-1",
+  id: "variant-2",
+  priceData: {
     standard: {
-      price: 15,
-      prices
-      sale
-      ...
+      price: 35,
+      // ...
     },
     subscription: {
-      price: 10,
-      sale
-      ...
+      id: "plan-2",
+      name: "Weekly",
+      price: 20,
+      // ...
+    },
   },
-  productId: 'product-1',
-  variantId: 'variant-2',
-  ...
-}
+  // ...
+};
 ```
 
 #### API
@@ -237,4 +237,4 @@ const activeVariant = getActiveVariant(
 
 Returned object
 
-- activeVariant: The resolved price data for the product merged with the matching variant, if found.
+- activeVariant: The resolved price data for the product and selected options (under a `priceData` field) merged with the matching variant, if found.
