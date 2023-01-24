@@ -88,7 +88,7 @@ type VariantPriceFields =
 	| "purchaseOptions";
 
 interface FallbackVariant {
-	productId?: string;
+	productId?: string | null;
 	priceData?: {
 		standard?: StandardPurchaseOption;
 		subscription?: SubscriptionPlan;
