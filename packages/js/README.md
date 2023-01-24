@@ -287,8 +287,61 @@ const categories = getCategoryList(client, options);
 ```
 
 - `client`: See SwellClient.
-- `options` (object, optional): Options for filtering and paginating the response.
+- `options` (object, optional): Options for paginating the response.
   - `requestOptions`: See requestOptions
   - `page` (number, optional): For pagination purposes. The categories retrieved will start at the pointer specified by this field.
   - `limit` (number, optional): Max number of categories to return per page. Defaults to 15, with a maximum of 100.
+  - `sort` (string, optional): Field to sort responses by.
+
+### `getAttribute`
+
+Fetches an attribute using the attribute's id.
+
+#### Example
+
+```typescript
+const attribute = getAttribute(client, "my-attribute", {
+	locale: "en",
+	currency: "USD",
+});
+```
+
+#### API
+
+```typescript
+const attribute = getAttribute(client, id, requestOptions);
+```
+
+- `client` (SwellClient): The client returned from the `init` function.
+- `id` (string): Identifier for the attribute.
+- `options`: (object, optional): Options for expanding and setting custom request options for the request.
+  - `requestOptions` (object, optional): Overwrites the client options for the current request. Parameters:
+    - `locale` (string, optional): The requested attribute's locale.
+    - `currency` (string, optional): The requested attribute's currency.
+    - `sessionToken` (string, optional): The token from the session to be used.
+
+### `getAttributeList`
+
+Returns a paginated list of the store's attributes.
+
+#### Example
+
+```typescript
+const attributes = getAttributeList(client, {
+	page: 2,
+	limit: 25,
+});
+```
+
+#### API
+
+```typescript
+const attributes = getAttributeList(client, options);
+```
+
+- `client`: See SwellClient.
+- `options` (object, optional): Options for paginating the response.
+  - `requestOptions`: See requestOptions
+  - `page` (number, optional): For pagination purposes. The attributes retrieved will start at the pointer specified by this field.
+  - `limit` (number, optional): Max number of attributes to return per page. Defaults to 15, with a maximum of 100.
   - `sort` (string, optional): Field to sort responses by.

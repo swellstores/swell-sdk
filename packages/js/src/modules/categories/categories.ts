@@ -41,7 +41,7 @@ export async function getCategory<
 /**
  * Returns a paginated list of the store's categories
  * @param client The client returned from the `init` function.
- * @param options Options for filtering and paginating the response.
+ * @param options Options for paginating the response.
  */
 export async function getCategoryList<
 	C extends SwellClient | SwellCamelCaseClient,
