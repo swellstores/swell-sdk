@@ -27,7 +27,7 @@ describe("useProductList", () => {
 			},
 		);
 
-		expect(result.current?.products).toEqual([]);
+		expect(result.current?.products).toBeNull();
 		expect(result.current?.loading).toBe(true);
 		await waitForValueToChange(() => result.current?.loading);
 		expect(result.current.products).toEqual({
