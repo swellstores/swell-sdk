@@ -102,7 +102,7 @@ Changes to the filters will trigger a refetch and update the returned values acc
 #### API
 
 ```typescript
-const products = getProductList(client, options);
+const { products, loading, error } = getProductList(options);
 ```
 
 Arguments:
@@ -111,6 +111,6 @@ Arguments:
 
 Returns:
 
-- `products`: List of products
+- `products`: Paginated list of products
 - `loading` (boolean)
 - `error` (string | null)

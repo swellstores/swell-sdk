@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import useSwell from "swell/useSwell";
-import {
+import { getActiveVariant, getProduct } from "@swell/js";
+import type {
+	Product,
+	CamelCase,
+	ExpandableFields,
 	GetProductOptions,
 	SelectedProductOption,
-	getActiveVariant,
-	getProduct,
 } from "@swell/js";
-import type { Product, CamelCase, ExpandableFields } from "@swell/js";
 
 type UseProductOptions<E extends ExpandableFields> = {
 	selectedOptions?: SelectedProductOption[];
