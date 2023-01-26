@@ -2,7 +2,7 @@
 "@swell/js": minor
 ---
 
-0.2.0 - Product module
+0.1.0 - Product module
 
 New methods:
 
