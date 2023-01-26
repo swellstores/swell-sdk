@@ -28,14 +28,3 @@ export type SwitchCamelCase<
 	C extends SwellClient | SwellCamelCaseClient,
 	T extends object | undefined | null,
 > = C extends SwellCamelCaseClient ? CamelCase<T> : T;
-
-type StripExpandedAmount<T extends ExpandableField<string>> =
-	T extends `${infer K}:${number}` ? K : T;
-
-export type ExpandableField<T extends string> = T | `${T}:${number}`;
-
-export type Expand<
-	K extends string,
-	E extends any[],
-	T extends object,
-> = K extends StripExpandedAmount<E[number]> ? T : unknown;
