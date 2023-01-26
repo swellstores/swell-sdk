@@ -1,12 +1,21 @@
 {
 	"name": "@swell/react",
 	"version": "0.0.0",
-	"private": true,
 	"type": "module",
 	"main": "./dist/index.umd.js",
 	"types": "./dist/index.d.ts",
+	"module": "./dist/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/swellstores/swell-sdk.git"
+	},
+	"homepage": "https://github.com/swellstores/swell-sdk/tree/main/packages/react#readme",
+	"files": [
+		"dist"
+	],
 	"exports": {
 		".": {
+			"types": "./dist/index.d.ts",
 			"import": "./dist/index.esm.js",
 			"require": "./dist/index.umd.js"
 		}
