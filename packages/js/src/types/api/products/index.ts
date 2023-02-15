@@ -1,4 +1,4 @@
-import type { Attributes, Content, BaseModel, Image } from "types/api";
+import type { BaseModel } from "..";
 
 export * from "./expanded";
 
@@ -53,6 +53,9 @@ export interface Product extends BaseModel {
 
 export type DeliveryType = "shipment" | "subscription" | "giftcard";
 export type ProductType = "standard" | "digital" | "bundle" | "giftcard";
+
+type Content = Record<string, unknown>;
+type Attributes = Record<string, unknown>;
 
 export interface Category {
 	parent_id: string;
@@ -188,6 +191,23 @@ export interface CrossSell {
 export interface UpSell {
 	id?: string | null;
 	product_id?: string | null;
+}
+
+export interface Image {
+	file?: File | null;
+	id?: string | null;
+}
+
+export interface File {
+	content_type?: string | null;
+	date_uploaded?: string | null;
+	filename?: string | null;
+	height?: number | null;
+	id?: string | null;
+	length?: number | null;
+	md5?: string | null;
+	url?: string | null;
+	width?: number | null;
 }
 
 export type ShipmentDimensionsUnit = "in" | "cm";

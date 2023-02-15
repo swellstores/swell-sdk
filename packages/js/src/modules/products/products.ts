@@ -9,9 +9,9 @@ import type {
 	SubscriptionPlan,
 	StandardPurchaseOption,
 } from "types/api/products";
-import type { ExpandableField, SwitchCamelCase, CamelCase } from "types/utils";
+import type { SwitchCamelCase, CamelCase } from "types/utils";
 import type {
-	GetProductExpandOptions,
+	ExpandableFields,
 	GetProductListOptions,
 	GetProductOptions,
 	GetProductResult,
@@ -27,7 +27,7 @@ import type {
  */
 export async function getProduct<
 	C extends SwellClient | SwellCamelCaseClient,
-	E extends Array<ExpandableField<GetProductExpandOptions>> = [],
+	E extends ExpandableFields = [],
 >(
 	client: C,
 	id: string,
@@ -88,7 +88,7 @@ type VariantPriceFields =
 	| "purchaseOptions";
 
 interface FallbackVariant {
-	productId?: string | null;
+	productId?: string;
 	priceData?: {
 		standard?: StandardPurchaseOption;
 		subscription?: SubscriptionPlan;
@@ -112,17 +112,19 @@ export type ActiveVariant = FallbackVariant | WithMatchingVariant;
  * @returns The resolved price data for the product merged with the matching variant, if found.
  */
 export function getActiveVariant(
-	product: CamelCase<WithVariants<Product>>,
+	product?: CamelCase<WithVariants<Product>>,
 	selectedOptions?: SelectedProductOption[],
 	selectedPlanId?: string | null,
-): ActiveVariant {
+): ActiveVariant | undefined {
+	if (!product) return;
+
 	const variants = product?.variants?.results;
 
 	const baseStandardData = product?.purchaseOptions?.standard;
 	const baseSubscriptionData = product?.purchaseOptions?.subscription;
 
 	const baseVariant = {
-		productId: product.id,
+		productId: product?.id,
 		priceData: {
 			...(baseStandardData && { standard: baseStandardData }),
 			...(baseSubscriptionData &&
@@ -192,11 +194,11 @@ function getVariantStandardPrice(
 	if (matchingVariant?.price) {
 		const { price, prices, sale, salePrice, origPrice } = matchingVariant;
 		return {
-			price,
-			prices,
-			sale,
-			salePrice,
-			origPrice,
+			...(prices && { prices }),
+			...(price && { price }),
+			...(sale && { sale }),
+			...(salePrice && { salePrice }),
+			...(origPrice && { origPrice }),
 		};
 	}
 
