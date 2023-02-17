@@ -238,3 +238,57 @@ const activeVariant = getActiveVariant(
 Returned object
 
 - activeVariant: The resolved price data for the product and selected options (under a `priceData` field) merged with the matching variant, if found.
+
+### `getCategory`
+
+Fetches a category using the passed-in identifier, which can be either the category's ID or the category's slug.
+
+#### Example
+
+```typescript
+const category = getCategory(client, "my-category", {
+	locale: "en",
+	currency: "USD",
+});
+```
+
+#### API
+
+```typescript
+const category = getCategory(client, id, requestOptions);
+```
+
+- `client` (SwellClient): The client returned from the `init` function.
+- `id` (string): Identifier for the category. Can be either the category's slug or the category's id.
+- `options`: (object, optional): Options for expanding and setting custom request options for the request.
+  - `expand` (object, optional): An array of the fields to expand. See [Expandable fields]() for a list of the possible expand options.
+  - `requestOptions` (object, optional): Overwrites the client options for the current request. Parameters:
+    - `locale` (string, optional): The requested category's locale.
+    - `currency` (string, optional): The requested category's currency.
+    - `sessionToken` (string, optional): The token from the session to be used.
+
+### `getCategoryList`
+
+Returns a paginated list of the store's categories.
+
+#### Example
+
+```typescript
+const categories = getCategoryList(client, {
+	page: 2,
+	limit: 25,
+});
+```
+
+#### API
+
+```typescript
+const categories = getCategoryList(client, options);
+```
+
+- `client`: See SwellClient.
+- `options` (object, optional): Options for filtering and paginating the response.
+  - `requestOptions`: See requestOptions
+  - `page` (number, optional): For pagination purposes. The categories retrieved will start at the pointer specified by this field.
+  - `limit` (number, optional): Max number of categories to return per page. Defaults to 15, with a maximum of 100.
+  - `sort` (string, optional): Field to sort responses by.
